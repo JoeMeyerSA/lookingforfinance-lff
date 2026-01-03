@@ -6,6 +6,8 @@ import Education from './pages/Education';
 import EducationArticle from './pages/EducationArticle';
 import Calculators from './pages/Calculators';
 import EligibilityCheck from './pages/EligibilityCheck';
+import About from './pages/About';
+import Contact from './pages/Contact';
 import __Layout from './Layout.jsx';
 
 
@@ -18,6 +20,8 @@ export const PAGES = {
     "EducationArticle": EducationArticle,
     "Calculators": Calculators,
     "EligibilityCheck": EligibilityCheck,
+    "About": About,
+    "Contact": Contact,
 }
 
 export const pagesConfig = {
