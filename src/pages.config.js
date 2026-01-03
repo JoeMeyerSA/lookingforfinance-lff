@@ -4,6 +4,8 @@ import SolutionDetail from './pages/SolutionDetail';
 import Insurance from './pages/Insurance';
 import Education from './pages/Education';
 import EducationArticle from './pages/EducationArticle';
+import Calculators from './pages/Calculators';
+import EligibilityCheck from './pages/EligibilityCheck';
 import __Layout from './Layout.jsx';
 
 
@@ -14,6 +16,8 @@ export const PAGES = {
     "Insurance": Insurance,
     "Education": Education,
     "EducationArticle": EducationArticle,
+    "Calculators": Calculators,
+    "EligibilityCheck": EligibilityCheck,
 }
 
 export const pagesConfig = {
