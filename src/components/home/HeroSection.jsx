@@ -38,7 +38,7 @@ export default function HeroSection() {
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10 px-8 py-6 text-lg">
+              <Button asChild size="lg" variant="outline" className="bg-white/10 border-white/30 text-white hover:bg-white/20 px-8 py-6 text-lg">
                 <Link to={createPageUrl('Calculators')}>
                   <Calculator className="w-5 h-5 mr-2" />
                   Try a Calculator
