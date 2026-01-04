@@ -30,6 +30,7 @@ export default function Education() {
       description: 'New to finance? This guide covers the basics you need to know before applying.',
       category: 'Getting Started',
       readTime: '5 min',
+      featured: true,
     },
     {
       slug: 'eligibility',
@@ -37,6 +38,15 @@ export default function Education() {
       description: 'Learn what funders look for and how eligibility is assessed.',
       category: 'Getting Started',
       readTime: '4 min',
+      featured: true,
+    },
+    {
+      slug: 'affordability',
+      title: 'Affordability: Can You Actually Afford It?',
+      description: 'Understand how funders calculate affordability and what it means for your budget.',
+      category: 'Getting Started',
+      readTime: '4 min',
+      featured: true,
     },
     {
       slug: 'rates-terms',
@@ -53,6 +63,20 @@ export default function Education() {
       readTime: '4 min',
     },
     {
+      slug: 'equity-deposit',
+      title: 'Equity & Deposits: Why They Matter',
+      description: 'How upfront contributions affect your rates, terms, and approval chances.',
+      category: 'Key Concepts',
+      readTime: '5 min',
+    },
+    {
+      slug: 'true-cost',
+      title: 'The True Cost of Borrowing',
+      description: 'Beyond monthly payments: understanding total interest and long-term costs.',
+      category: 'Key Concepts',
+      readTime: '4 min',
+    },
+    {
       slug: 'calculators-guide',
       title: 'How to Use Our Calculators Responsibly',
       description: 'Get the most out of our calculators while understanding their limitations.',
@@ -60,10 +84,31 @@ export default function Education() {
       readTime: '3 min',
     },
     {
+      slug: 'comparing-options',
+      title: 'Comparing Finance Options',
+      description: 'How to evaluate different offers and understand what makes one better than another.',
+      category: 'Tools',
+      readTime: '5 min',
+    },
+    {
+      slug: 'red-flags',
+      title: 'Red Flags to Watch For',
+      description: 'Warning signs of predatory lending and how to protect yourself.',
+      category: 'Protection',
+      readTime: '4 min',
+    },
+    {
       slug: 'documents',
       title: 'Documents You May Need',
       description: 'An overview of typical documentation requirements for finance applications.',
       category: 'Preparation',
+      readTime: '5 min',
+    },
+    {
+      slug: 'rejection-reasons',
+      title: 'Why Applications Get Declined',
+      description: 'Common reasons for rejection and what you can do about them.',
+      category: 'Troubleshooting',
       readTime: '5 min',
     },
   ];
@@ -97,22 +142,42 @@ export default function Education() {
       question: 'Are the calculator results accurate?',
       answer: 'Our calculators provide estimates only. Actual rates, terms, and monthly payments depend on your specific circumstances and the funder\'s assessment. Use calculators for planning, not as guaranteed figures.',
     },
+    {
+      question: 'How quickly can I get a decision?',
+      answer: 'After our initial eligibility pre-check, we\'ll contact you within 1-2 business days. If you proceed to a full application, decision times depend on the funder and complexity – from a few days to a few weeks.',
+    },
+    {
+      question: 'What if my application is declined?',
+      answer: 'We\'ll explain why it was declined and discuss whether there are alternative options or steps you can take to improve your situation. Sometimes a decline is about timing, not a permanent barrier.',
+    },
+    {
+      question: 'Can I apply for finance if I\'m self-employed?',
+      answer: 'Yes. Self-employed applicants typically need to provide business financials and tax returns. Requirements depend on how long you\'ve been trading and the type of finance you need.',
+    },
   ];
 
   const glossary = [
+    { term: 'Affordability Assessment', definition: 'The calculation funders use to determine if you can afford the monthly repayments, based on your income and expenses.' },
     { term: 'Amortisation', definition: 'The process of spreading loan repayments over time, with each payment covering both principal and interest.' },
     { term: 'Balloon Payment', definition: 'A larger final payment at the end of a loan term, reducing monthly payments during the loan period.' },
     { term: 'Capital', definition: 'The principal amount borrowed, excluding interest and fees.' },
     { term: 'Collateral', definition: 'An asset pledged as security for a loan, which the lender can claim if you default.' },
+    { term: 'Credit Bureau', definition: 'An organisation that collects and maintains credit information, used by funders to assess creditworthiness.' },
     { term: 'Credit Score', definition: 'A numerical rating representing your creditworthiness based on your credit history.' },
+    { term: 'Debt-to-Income Ratio', definition: 'The percentage of your income that goes toward debt repayments. Lower is better for approval chances.' },
+    { term: 'Default', definition: 'Failure to meet the legal obligations of a loan, typically by missing payments.' },
     { term: 'Deposit', definition: 'An upfront payment made towards a purchase, reducing the amount needed to finance.' },
     { term: 'Equity', definition: 'The difference between an asset\'s value and any debt secured against it.' },
     { term: 'Fixed Rate', definition: 'An interest rate that remains constant throughout the loan term.' },
-    { term: 'LTV (Loan-to-Value)', definition: 'The ratio of the loan amount to the value of the asset being financed.' },
-    { term: 'Prime Rate', definition: 'The benchmark interest rate used by banks, upon which other rates are based.' },
+    { term: 'Initiation Fee', definition: 'A once-off fee charged by the funder when setting up a new loan.' },
+    { term: 'LTV (Loan-to-Value)', definition: 'The ratio of the loan amount to the value of the asset being financed. Lower LTV means less risk.' },
+    { term: 'Pre-qualification', definition: 'An initial assessment of whether you\'re likely to be approved, based on basic information.' },
+    { term: 'Prime Rate', definition: 'The benchmark interest rate used by banks in South Africa, upon which other rates are based (currently 11.75%).' },
     { term: 'Principal', definition: 'The original amount borrowed, before interest is added.' },
-    { term: 'Refinancing', definition: 'Replacing an existing loan with a new one, often to get better terms.' },
+    { term: 'Refinancing', definition: 'Replacing an existing loan with a new one, often to get better terms or access equity.' },
+    { term: 'Secured Loan', definition: 'A loan backed by an asset (collateral), such as a home loan or vehicle finance.' },
     { term: 'Term', definition: 'The length of time over which a loan is repaid.' },
+    { term: 'Unsecured Loan', definition: 'A loan not backed by collateral, typically with higher interest rates due to increased risk.' },
     { term: 'Variable Rate', definition: 'An interest rate that can change during the loan term, usually linked to the prime rate.' },
   ];
 
@@ -166,6 +231,41 @@ export default function Education() {
           </motion.div>
         </div>
       </section>
+
+      {/* Start Here Path - for first-time visitors */}
+      {activeTab === 'guides' && !searchQuery && (
+        <section className="py-8 bg-gradient-to-br from-[#0d9488]/10 to-[#0d9488]/5 border-b border-slate-200">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex items-center gap-3 mb-4">
+              <GraduationCap className="w-5 h-5 text-[#0d9488]" />
+              <h2 className="text-lg font-semibold text-[#1e3a5f]">New here? Start with these 3 guides</h2>
+            </div>
+            <div className="grid md:grid-cols-3 gap-4">
+              {guides.filter(g => g.featured).map((guide, idx) => (
+                <Link
+                  key={guide.slug}
+                  to={createPageUrl('EducationArticle') + `?slug=${guide.slug}`}
+                  className="relative bg-white rounded-xl p-5 shadow-sm border border-slate-100 hover:shadow-md hover:border-[#0d9488]/30 transition-all group"
+                >
+                  <div className="absolute -top-3 -left-3 w-8 h-8 bg-[#0d9488] rounded-full flex items-center justify-center text-white font-bold text-sm">
+                    {idx + 1}
+                  </div>
+                  <h3 className="text-base font-semibold text-[#1e3a5f] mb-2 group-hover:text-[#0d9488] transition-colors">
+                    {guide.title}
+                  </h3>
+                  <p className="text-sm text-slate-600 mb-3 leading-snug">
+                    {guide.description}
+                  </p>
+                  <div className="flex items-center text-xs text-slate-500">
+                    <span>{guide.readTime}</span>
+                    <ArrowRight className="w-3 h-3 ml-auto text-[#0d9488] group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Tabs */}
       <section className="border-b border-slate-200 bg-white sticky top-16 lg:top-20 z-40">
@@ -233,6 +333,28 @@ export default function Education() {
                     <p className="text-slate-500">No guides found matching your search.</p>
                   </div>
                 )}
+
+                {/* CTA */}
+                <div className="mt-12 grid md:grid-cols-2 gap-6">
+                  <div className="bg-gradient-to-br from-[#1e3a5f] to-[#0f4c5c] rounded-2xl p-6 text-white">
+                    <h3 className="text-xl font-semibold mb-2">Ready to explore options?</h3>
+                    <p className="text-slate-300 text-sm mb-4">See what finance solutions we offer for your situation.</p>
+                    <Button asChild size="sm" className="bg-[#0d9488] hover:bg-[#0f766e]">
+                      <Link to={createPageUrl('Solutions')}>
+                        Browse Solutions <ArrowRight className="w-4 h-4 ml-2" />
+                      </Link>
+                    </Button>
+                  </div>
+                  <div className="bg-gradient-to-br from-[#0d9488] to-[#0f766e] rounded-2xl p-6 text-white">
+                    <h3 className="text-xl font-semibold mb-2">Try our calculators</h3>
+                    <p className="text-white/90 text-sm mb-4">Estimate payments and explore different scenarios.</p>
+                    <Button asChild size="sm" variant="outline" className="bg-white text-[#0d9488] hover:bg-slate-50">
+                      <Link to={createPageUrl('Calculators')}>
+                        Use Calculators <ArrowRight className="w-4 h-4 ml-2" />
+                      </Link>
+                    </Button>
+                  </div>
+                </div>
               </motion.div>
             )}
 

@@ -243,6 +243,224 @@ export default function EducationArticle() {
         { label: 'Contact us with questions', href: createPageUrl('Contact') },
       ],
     },
+    'affordability': {
+      title: 'Affordability: Can You Actually Afford It?',
+      category: 'Getting Started',
+      readTime: '4 min',
+      intro: 'Being approved for finance and being able to comfortably afford it are two different things. This guide helps you think critically about affordability beyond just the monthly payment.',
+      sections: [
+        {
+          title: 'The affordability assessment',
+          content: 'Funders use an affordability calculation to ensure you can repay. They take your income, deduct existing debts and living expenses, and determine what\'s left for new repayments. But their calculation is minimum affordability – not necessarily comfortable affordability.',
+        },
+        {
+          title: 'Beyond the monthly payment',
+          content: null,
+          bullets: [
+            '<strong>Other costs:</strong> Insurance, maintenance, rates (for property), fuel (for vehicles)',
+            '<strong>Income changes:</strong> What if your income reduces or you lose your job?',
+            '<strong>Interest rate changes:</strong> Variable rates can increase, raising your payment',
+            '<strong>Emergency buffer:</strong> Can you still cover unexpected expenses?',
+          ],
+        },
+        {
+          title: 'The 30% rule (guideline)',
+          content: 'A common guideline is that all debt repayments (including the new finance) should not exceed 30-40% of your gross income. This leaves room for saving, emergencies, and quality of life.',
+        },
+        {
+          title: 'Stress-test your budget',
+          content: 'Before committing, imagine your monthly payment increased by 20%. Could you still manage? This helps ensure you\'re not stretching too thin.',
+        },
+      ],
+      nextSteps: [
+        { label: 'Use our calculators', href: createPageUrl('Calculators') },
+        { label: 'Check your eligibility', href: createPageUrl('EligibilityCheck') },
+      ],
+    },
+    'equity-deposit': {
+      title: 'Equity & Deposits: Why They Matter',
+      category: 'Key Concepts',
+      readTime: '5 min',
+      intro: 'Putting money upfront – whether a deposit on a purchase or equity in an asset – significantly affects your finance terms and approval chances.',
+      sections: [
+        {
+          title: 'What is equity vs deposit?',
+          content: '<strong>Deposit:</strong> Cash you pay upfront when buying something. <strong>Equity:</strong> The portion of an asset you own outright (e.g., if your home is worth R2m and you owe R1m, you have R1m equity).',
+        },
+        {
+          title: 'Why funders care',
+          content: null,
+          bullets: [
+            '<strong>Lower risk:</strong> If you default, they can recover more of their money',
+            '<strong>Commitment signal:</strong> You have "skin in the game"',
+            '<strong>Lower loan-to-value (LTV):</strong> The smaller the loan relative to the asset, the less risky',
+          ],
+        },
+        {
+          title: 'Benefits of a larger deposit/equity',
+          content: null,
+          bullets: [
+            'Better interest rates (sometimes significantly better)',
+            'Higher approval likelihood',
+            'Lower monthly payments',
+            'Less total interest paid over the loan term',
+          ],
+        },
+        {
+          title: 'How much is enough?',
+          content: 'Property finance: 10-20% deposit is typical (higher is better). Vehicle: 10-20%. Business: depends on risk profile. More equity always helps, but we can work with various scenarios.',
+        },
+      ],
+      nextSteps: [
+        { label: 'Understand rates & terms', href: createPageUrl('EducationArticle') + '?slug=rates-terms' },
+        { label: 'Check your eligibility', href: createPageUrl('EligibilityCheck') },
+      ],
+    },
+    'true-cost': {
+      title: 'The True Cost of Borrowing',
+      category: 'Key Concepts',
+      readTime: '4 min',
+      intro: 'The monthly payment is what you feel each month, but the total cost of borrowing is what you\'ll pay over time. Understanding the difference helps you make better decisions.',
+      sections: [
+        {
+          title: 'Monthly payment vs total cost',
+          content: 'A R1.5m home loan at 11.75% over 20 years costs about R15,500/month. But over 20 years, you\'ll pay R3.72m total – R2.22m in interest alone. The longer the term, the more total interest you pay.',
+        },
+        {
+          title: 'The impact of term length',
+          content: null,
+          bullets: [
+            '<strong>20 years:</strong> R15,500/month, R2.22m total interest',
+            '<strong>25 years:</strong> R14,200/month, R2.76m total interest (+R540k more)',
+            '<strong>30 years:</strong> R13,300/month, R3.29m total interest (+R1.07m more)',
+          ],
+        },
+        {
+          title: 'Small rate differences matter',
+          content: 'A 1% rate difference on a R1.5m loan over 20 years saves you about R200k in total interest. This is why a better credit score or larger deposit (which can lower your rate) has real financial value.',
+        },
+        {
+          title: 'Making overpayments',
+          content: 'Paying even R500 extra per month can save tens of thousands in interest and shorten your term by years. Ask about overpayment options when setting up finance.',
+        },
+      ],
+      nextSteps: [
+        { label: 'Try our calculators', href: createPageUrl('Calculators') },
+        { label: 'Learn about rates', href: createPageUrl('EducationArticle') + '?slug=rates-terms' },
+      ],
+    },
+    'comparing-options': {
+      title: 'Comparing Finance Options',
+      category: 'Tools',
+      readTime: '5 min',
+      intro: 'You might receive multiple offers. Knowing how to compare them properly helps you choose the best option for your situation.',
+      sections: [
+        {
+          title: 'What to compare',
+          content: null,
+          bullets: [
+            '<strong>Interest rate:</strong> But not in isolation – consider the term and total cost',
+            '<strong>Monthly payment:</strong> Can you comfortably afford it?',
+            '<strong>Total cost:</strong> What will you pay over the full term?',
+            '<strong>Flexibility:</strong> Can you overpay? Are there penalties for early settlement?',
+            '<strong>Fees:</strong> Initiation fees, admin fees, insurance requirements',
+          ],
+        },
+        {
+          title: 'Lower rate doesn\'t always mean better',
+          content: 'A slightly higher rate with no initiation fee might cost less overall. A lower rate with strict penalties might not suit your plans. Consider the full picture.',
+        },
+        {
+          title: 'Fixed vs variable rates',
+          content: 'Fixed rates provide certainty but are usually higher initially. Variable rates (linked to prime) offer potential savings if rates drop, but carry risk if they rise. Choose based on your risk tolerance and cash flow stability.',
+        },
+        {
+          title: 'We can help you compare',
+          content: 'If you receive multiple offers, we can help you understand the trade-offs and which option aligns best with your goals and circumstances.',
+        },
+      ],
+      nextSteps: [
+        { label: 'Understand rates & terms', href: createPageUrl('EducationArticle') + '?slug=rates-terms' },
+        { label: 'Check your eligibility', href: createPageUrl('EligibilityCheck') },
+      ],
+    },
+    'red-flags': {
+      title: 'Red Flags to Watch For',
+      category: 'Protection',
+      readTime: '4 min',
+      intro: 'Not all finance offers are created equal. Some lenders use predatory practices. Here\'s what to watch for to protect yourself.',
+      sections: [
+        {
+          title: 'Warning signs of predatory lending',
+          content: null,
+          bullets: [
+            '<strong>Upfront fees before approval:</strong> Legitimate funders don\'t charge before approving you',
+            '<strong>Guaranteed approval claims:</strong> No legitimate funder can guarantee approval',
+            '<strong>Pressure tactics:</strong> "Sign now or lose this rate" should raise concerns',
+            '<strong>Unclear terms:</strong> If they won\'t clearly explain rates and fees, walk away',
+            '<strong>Too good to be true:</strong> Rates far below market norms are suspicious',
+          ],
+        },
+        {
+          title: 'Reckless lending',
+          content: 'If a funder approves you without properly assessing affordability, they may be engaging in reckless lending (which is illegal). While this might seem helpful, it can lead you into unmanageable debt.',
+        },
+        {
+          title: 'Hidden fees and charges',
+          content: 'Always ask for a full breakdown of costs – initiation fees, monthly admin fees, insurance requirements, early settlement penalties. These should be disclosed clearly upfront.',
+        },
+        {
+          title: 'How we protect you',
+          content: 'We only work with registered, reputable funders. We explain all terms clearly. We won\'t push you into finance you can\'t afford. If something doesn\'t feel right, we\'ll tell you.',
+        },
+      ],
+      nextSteps: [
+        { label: 'Start an eligibility check', href: createPageUrl('EligibilityCheck') },
+        { label: 'Contact us with concerns', href: createPageUrl('Contact') },
+      ],
+    },
+    'rejection-reasons': {
+      title: 'Why Applications Get Declined',
+      category: 'Troubleshooting',
+      readTime: '5 min',
+      intro: 'Understanding common reasons for decline helps you address issues before applying or know what to work on for the future.',
+      sections: [
+        {
+          title: 'Common reasons for decline',
+          content: null,
+          bullets: [
+            '<strong>Affordability:</strong> Income too low relative to debt and expenses',
+            '<strong>Credit history:</strong> Defaults, judgements, or too many recent applications',
+            '<strong>Unstable income:</strong> Recent job changes, contract work, or irregular income',
+            '<strong>Insufficient deposit:</strong> LTV (loan-to-value) too high for the funder\'s appetite',
+            '<strong>Asset issues:</strong> Property or vehicle not meeting funder requirements',
+          ],
+        },
+        {
+          title: 'What you can do about it',
+          content: null,
+          bullets: [
+            '<strong>Improve affordability:</strong> Reduce other debts, increase deposit, or wait for income to stabilise',
+            '<strong>Fix credit issues:</strong> Clear small debts, dispute errors, avoid new credit applications',
+            '<strong>Provide more information:</strong> Sometimes additional documentation can address concerns',
+            '<strong>Try alternative funders:</strong> Different funders have different appetites and criteria',
+          ],
+        },
+        {
+          title: 'Timing matters',
+          content: 'Sometimes it\'s not a "no", it\'s a "not yet". If you\'re close to qualifying, we\'ll tell you what needs to change and when to reapply.',
+        },
+        {
+          title: 'Learning from rejection',
+          content: 'A decline isn\'t personal – it\'s a risk assessment. Use it as feedback to improve your financial position for next time.',
+        },
+      ],
+      nextSteps: [
+        { label: 'Understand eligibility', href: createPageUrl('EducationArticle') + '?slug=eligibility' },
+        { label: 'Learn about credit scores', href: createPageUrl('EducationArticle') + '?slug=credit-score' },
+        { label: 'Contact us for guidance', href: createPageUrl('Contact') },
+      ],
+    },
   };
 
   const article = articles[slug] || articles['start-here'];
