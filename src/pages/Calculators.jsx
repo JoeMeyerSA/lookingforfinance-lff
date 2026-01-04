@@ -135,8 +135,8 @@ export default function Calculators() {
                 <h3 className="text-xl font-semibold text-white mb-2">
                   Ready to check your eligibility?
                 </h3>
-                <p className="text-slate-300 mb-4">
-                  Get a personalised assessment based on your actual circumstances.
+                <p className="text-slate-300 mb-4 text-sm">
+                  Get a personalised assessment. Outcomes are subject to assessment and final approval by the relevant funder.
                 </p>
                 <Button asChild size="lg" className="bg-[#0d9488] hover:bg-[#0f766e] text-white">
                   <Link to={createPageUrl('EligibilityCheck')}>

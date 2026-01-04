@@ -234,7 +234,7 @@ export default function Insurance() {
                       </li>
                     </ol>
                   </div>
-                  <div className="flex gap-3 justify-center">
+                  <div className="flex flex-col sm:flex-row gap-3 justify-center">
                     <Button asChild variant="outline" onClick={() => setSubmitted(false)}>
                       <Link to={createPageUrl('Home')}>Return Home</Link>
                     </Button>
@@ -246,35 +246,40 @@ export default function Insurance() {
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-5">
                   <div>
-                    <label className="block text-sm font-medium text-slate-700 mb-2">
+                    <label htmlFor="insurance-name" className="block text-sm font-medium text-slate-700 mb-2">
                       Your Name *
                     </label>
                     <Input
+                      id="insurance-name"
                       required
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                       placeholder="Full name"
+                      aria-required="true"
                     />
                   </div>
 
                   <div className="grid sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-sm font-medium text-slate-700 mb-2">
+                      <label htmlFor="insurance-email" className="block text-sm font-medium text-slate-700 mb-2">
                         Email *
                       </label>
                       <Input
+                        id="insurance-email"
                         type="email"
                         required
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                         placeholder="your@email.com"
+                        aria-required="true"
                       />
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-slate-700 mb-2">
+                      <label htmlFor="insurance-phone" className="block text-sm font-medium text-slate-700 mb-2">
                         Phone
                       </label>
                       <Input
+                        id="insurance-phone"
                         type="tel"
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
@@ -284,10 +289,11 @@ export default function Insurance() {
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-slate-700 mb-2">
+                    <label htmlFor="insurance-type" className="block text-sm font-medium text-slate-700 mb-2">
                       Insurance Type of Interest
                     </label>
                     <select
+                      id="insurance-type"
                       className="w-full h-10 px-3 rounded-md border border-slate-200 bg-white text-sm focus:outline-none focus:ring-2 focus:ring-[#0d9488]"
                       value={formData.insuranceType}
                       onChange={(e) => setFormData({ ...formData, insuranceType: e.target.value })}
@@ -306,10 +312,11 @@ export default function Insurance() {
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-slate-700 mb-2">
+                    <label htmlFor="insurance-message" className="block text-sm font-medium text-slate-700 mb-2">
                       Tell us about your needs
                     </label>
                     <Textarea
+                      id="insurance-message"
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                       placeholder="Briefly describe your current situation and what you're looking to achieve..."

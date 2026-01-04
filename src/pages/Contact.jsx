@@ -162,14 +162,16 @@ export default function Contact() {
                     <form onSubmit={handleSubmit} className="space-y-5">
                       <div className="grid sm:grid-cols-2 gap-4">
                         <div>
-                          <label className="block text-sm font-medium text-slate-700 mb-2">
+                          <label htmlFor="contact-name" className="block text-sm font-medium text-slate-700 mb-2">
                             Your Name *
                           </label>
                           <Input
+                            id="contact-name"
                             required
                             value={formData.name}
                             onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                             placeholder="Full name"
+                            aria-required="true"
                           />
                         </div>
                         <div>

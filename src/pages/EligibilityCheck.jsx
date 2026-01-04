@@ -157,7 +157,7 @@ export default function EligibilityCheck() {
               </li>
             </ol>
           </div>
-          <div className="flex gap-3 justify-center">
+          <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Button asChild variant="outline">
               <Link to={createPageUrl('Home')}>Return Home</Link>
             </Button>
