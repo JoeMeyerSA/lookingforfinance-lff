@@ -91,58 +91,56 @@ export default function Solutions() {
       </section>
 
       {/* Trust Layer */}
-      <section className="py-12 bg-white border-b border-slate-100">
+      <section className="py-12 lg:py-16 bg-white border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-md mx-auto">
-            <TrustLayer />
-          </div>
+          <TrustLayer />
         </div>
       </section>
 
       {/* Solutions Grid */}
       <section className="py-16 lg:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+        <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 lg:gap-6">
             {solutions.map((solution, index) => (
               <motion.div
                 key={solution.id}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: index * 0.1 }}
-                className="group bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl transition-all duration-300"
+                transition={{ duration: 0.4, delay: index * 0.05 }}
+                className="group bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl hover:border-[#0d9488]/30 transition-all duration-300"
               >
-                <div className="p-6 lg:p-8">
-                  <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${solution.color} flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300`}>
-                    <solution.icon className="w-7 h-7 text-white" />
+                <div className="p-6">
+                  <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${solution.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                    <solution.icon className="w-6 h-6 text-white" />
                   </div>
                   
-                  <h3 className="text-xl font-semibold text-[#1e3a5f] mb-3">
+                  <h3 className="text-lg font-semibold text-[#1e3a5f] mb-2 group-hover:text-[#0d9488] transition-colors">
                     {solution.title}
                   </h3>
-                  <p className="text-slate-600 mb-5 leading-relaxed">
+                  <p className="text-sm text-slate-600 mb-4 leading-relaxed">
                     {solution.description}
                   </p>
 
-                  <ul className="space-y-2 mb-6">
+                  <ul className="space-y-1.5 mb-5">
                     {solution.features.map((feature) => (
-                      <li key={feature} className="flex items-center gap-2 text-sm text-slate-600">
-                        <CheckCircle className="w-4 h-4 text-[#0d9488]" />
+                      <li key={feature} className="flex items-center gap-2 text-xs text-slate-600">
+                        <CheckCircle className="w-3.5 h-3.5 text-[#0d9488] flex-shrink-0" />
                         {feature}
                       </li>
                     ))}
                   </ul>
 
-                  <div className="flex gap-3">
-                    <Button asChild variant="outline" size="sm" className="flex-1">
-                      <Link to={createPageUrl('SolutionDetail') + `?type=${solution.id}`}>
-                        Learn More
-                      </Link>
-                    </Button>
-                    <Button asChild size="sm" className="flex-1 bg-[#0d9488] hover:bg-[#0f766e]">
+                  <div className="space-y-2">
+                    <Button asChild size="sm" className="w-full bg-[#0d9488] hover:bg-[#0f766e] text-sm">
                       <Link to={createPageUrl('EligibilityCheck') + `?solution=${solution.id}`}>
                         Check Eligibility
-                        <ArrowRight className="w-4 h-4 ml-1" />
+                        <ArrowRight className="w-3.5 h-3.5 ml-1" />
+                      </Link>
+                    </Button>
+                    <Button asChild variant="ghost" size="sm" className="w-full text-sm hover:bg-slate-50">
+                      <Link to={createPageUrl('SolutionDetail') + `?type=${solution.id}`}>
+                        Learn More
                       </Link>
                     </Button>
                   </div>
