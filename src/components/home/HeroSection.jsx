@@ -23,12 +23,11 @@ export default function HeroSection() {
             transition={{ duration: 0.6 }}
           >
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
-              Financial solutions,{' '}
-              <span className="text-[#0d9488]">clearly explained.</span>
+              Your finance journey,{' '}
+              <span className="text-[#0d9488]">made simple.</span>
             </h1>
             <p className="text-lg sm:text-xl text-slate-300 mb-8 leading-relaxed max-w-xl">
-              Check eligibility, explore scenarios, and get guided to the right finance pathway. 
-              We facilitate introductions and structured submissions to suitable funders.
+              From first-time buyers to business owners—we connect you with the right funders and guide you every step of the way.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-10">
@@ -74,31 +73,55 @@ export default function HeroSection() {
             className="hidden lg:block"
           >
             <div className="relative">
-              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+              {/* Decorative Elements */}
+              <div className="absolute -top-6 -right-6 w-24 h-24 bg-[#0d9488]/20 rounded-full blur-2xl" />
+              <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-white/10 rounded-full blur-2xl" />
+              
+              <div className="relative bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 shadow-2xl">
                 <div className="space-y-4">
-                  <div className="flex items-center gap-4 p-4 bg-white/10 rounded-xl">
-                    <div className="w-12 h-12 bg-[#0d9488] rounded-lg flex items-center justify-center">
+                  <motion.div 
+                    initial={{ x: -20, opacity: 0 }}
+                    animate={{ x: 0, opacity: 1 }}
+                    transition={{ duration: 0.5, delay: 0.4 }}
+                    className="flex items-center gap-4 p-4 bg-white/10 rounded-xl"
+                  >
+                    <div className="w-12 h-12 bg-gradient-to-br from-[#0d9488] to-[#0f766e] rounded-xl flex items-center justify-center shadow-lg">
                       <CheckCircle className="w-6 h-6 text-white" />
                     </div>
                     <div>
-                      <p className="text-white font-medium">Eligibility confirmed</p>
-                      <p className="text-slate-400 text-sm">Multiple options available</p>
+                      <p className="text-white font-semibold">Eligibility confirmed ✓</p>
+                      <p className="text-slate-300 text-sm">Multiple options available</p>
                     </div>
-                  </div>
+                  </motion.div>
                   <div className="grid grid-cols-2 gap-4">
-                    <div className="p-4 bg-white/5 rounded-xl">
-                      <p className="text-slate-400 text-sm">Est. monthly</p>
+                    <motion.div 
+                      initial={{ y: 20, opacity: 0 }}
+                      animate={{ y: 0, opacity: 1 }}
+                      transition={{ duration: 0.5, delay: 0.5 }}
+                      className="p-4 bg-white/5 rounded-xl border border-white/10"
+                    >
+                      <p className="text-slate-400 text-xs mb-1">Est. monthly</p>
                       <p className="text-2xl font-bold text-white">R 12,450</p>
-                    </div>
-                    <div className="p-4 bg-white/5 rounded-xl">
-                      <p className="text-slate-400 text-sm">Term</p>
+                    </motion.div>
+                    <motion.div 
+                      initial={{ y: 20, opacity: 0 }}
+                      animate={{ y: 0, opacity: 1 }}
+                      transition={{ duration: 0.5, delay: 0.6 }}
+                      className="p-4 bg-white/5 rounded-xl border border-white/10"
+                    >
+                      <p className="text-slate-400 text-xs mb-1">Term</p>
                       <p className="text-2xl font-bold text-white">20 years</p>
-                    </div>
+                    </motion.div>
                   </div>
-                  <div className="p-4 bg-[#0d9488]/20 rounded-xl border border-[#0d9488]/30">
-                    <p className="text-[#5eead4] text-sm">Next step</p>
+                  <motion.div 
+                    initial={{ y: 20, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{ duration: 0.5, delay: 0.7 }}
+                    className="p-4 bg-gradient-to-br from-[#0d9488]/30 to-[#0d9488]/20 rounded-xl border border-[#0d9488]/40"
+                  >
+                    <p className="text-[#5eead4] text-sm font-medium mb-1">🎉 Next step</p>
                     <p className="text-white font-medium">Documentation guidance ready</p>
-                  </div>
+                  </motion.div>
                 </div>
               </div>
             </div>
