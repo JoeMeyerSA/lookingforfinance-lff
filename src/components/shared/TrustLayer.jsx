@@ -45,21 +45,28 @@ export default function TrustLayer({ variant = 'default' }) {
         </div>
       </div>
 
+      {/* Support Partners */}
+      <div className={`${isCompact ? 'pt-3 pb-3' : 'pt-4 pb-4'} border-t border-slate-200`}>
+        <p className="text-xs text-slate-600 text-center leading-relaxed">
+          Specialist support when needed: accounting (TaxShop Stellenbosch) and FSP-registered advice (Franschhoek Consulting — FSP 5815).
+        </p>
+      </div>
+
       {/* Funder Panel */}
       <div className={`${isCompact ? 'pt-4' : 'pt-6'} border-t border-slate-200`}>
         <p className="text-xs font-medium text-slate-700 mb-3 text-center">Working with multiple funders:</p>
         <div className="grid grid-cols-3 sm:grid-cols-6 gap-2 mb-3">
-          {[1, 2, 3, 4, 5, 6].map((i) => (
+          {['Commercial banks', 'Registered credit providers', 'Specialist lenders', 'Private investors', 'Asset finance houses', 'Solar & equipment finance'].map((label, i) => (
             <div
               key={i}
-              className="h-12 bg-slate-100 rounded-lg flex items-center justify-center border border-slate-200"
+              className="h-12 bg-slate-100 rounded-lg flex items-center justify-center border border-slate-200 px-2"
             >
-              <span className="text-xs text-slate-400">Funder</span>
+              <span className="text-xs text-slate-400 text-center leading-tight">{label}</span>
             </div>
           ))}
         </div>
         <p className="text-xs text-slate-500 leading-relaxed text-center">
-          We work with a network of funders. Available options depend on fit and assessment.
+          We work with commercial banks plus a network of registered credit providers and investors. Options depend on fit and assessment.
         </p>
       </div>
     </div>

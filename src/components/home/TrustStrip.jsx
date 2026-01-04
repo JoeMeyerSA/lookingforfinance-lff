@@ -35,7 +35,7 @@ export default function TrustStrip() {
             In association with <strong className="text-[#1e3a5f] text-base">@360 Finance Stellenbosch</strong>
           </span>
           <span className="px-2 py-1 bg-[#0d9488]/10 text-[#0d9488] text-xs font-medium rounded-full">
-            FSP Registered
+            FSP support available (FSP 5815)
           </span>
         </div>
 
