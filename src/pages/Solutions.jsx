@@ -160,7 +160,7 @@ export default function Solutions() {
             Not sure which solution fits?
           </h2>
           <p className="text-lg text-slate-600 mb-6">
-            Start with a general eligibility check and we'll help identify the right pathway for your situation.
+            Start an eligibility pre-check and we'll help identify the right pathway for your situation.
           </p>
           <Button asChild size="lg" className="bg-[#0d9488] hover:bg-[#0f766e]">
             <Link to={createPageUrl('EligibilityCheck')}>

@@ -138,8 +138,7 @@ export default function EligibilityCheck() {
             Pre-Check Received
           </h1>
           <p className="text-slate-600 mb-6 leading-relaxed">
-            Thank you for submitting your eligibility pre-check. We'll review your information and 
-            contact you within 1-2 business days to discuss your guided route forward.
+            Thank you for submitting your eligibility pre-check. We'll review your information and contact you within 1-2 business days. Outcomes are subject to assessment and final approval by the relevant funder.
           </p>
           <div className="p-4 bg-slate-50 rounded-xl mb-6">
             <h3 className="font-medium text-[#1e3a5f] mb-2">What happens next:</h3>
@@ -163,7 +162,7 @@ export default function EligibilityCheck() {
               <Link to={createPageUrl('Home')}>Return Home</Link>
             </Button>
             <Button asChild className="bg-[#0d9488] hover:bg-[#0f766e]">
-              <Link to={createPageUrl('Calculators')}>Try Calculators</Link>
+              <Link to={createPageUrl('Calculators')}>Try a Calculator</Link>
             </Button>
           </div>
         </motion.div>

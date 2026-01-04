@@ -28,7 +28,7 @@ export default function HeroSection() {
             </h1>
             <p className="text-lg sm:text-xl text-slate-300 mb-8 leading-relaxed max-w-xl">
               Check eligibility, explore scenarios, and get guided to the right finance pathway. 
-              We help you understand your options before taking the next step.
+              We facilitate introductions and structured submissions to suitable funders.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-10">
@@ -52,15 +52,15 @@ export default function HeroSection() {
               <ol className="space-y-2 text-sm text-slate-300">
                 <li className="flex items-start gap-3">
                   <span className="flex-shrink-0 w-5 h-5 bg-[#0d9488] rounded-full flex items-center justify-center text-white text-xs font-medium">1</span>
-                  <span>Quick online eligibility check (5 minutes, no documents needed)</span>
+                  <span>Quick eligibility pre-check (5 minutes)</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="flex-shrink-0 w-5 h-5 bg-[#0d9488] rounded-full flex items-center justify-center text-white text-xs font-medium">2</span>
-                  <span>We'll review and contact you within 1-2 business days</span>
+                  <span>We review and contact you within 1-2 business days</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="flex-shrink-0 w-5 h-5 bg-[#0d9488] rounded-full flex items-center justify-center text-white text-xs font-medium">3</span>
-                  <span>If you proceed, we'll guide you through documentation and application</span>
+                  <span>If viable, we prepare and submit to suitable funders</span>
                 </li>
               </ol>
             </div>

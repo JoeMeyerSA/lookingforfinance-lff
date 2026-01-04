@@ -48,7 +48,7 @@ export default function About() {
               </h1>
               <p className="text-xl text-slate-300 leading-relaxed mb-8">
                 LookingForFinance helps individuals and organisations navigate the finance landscape. 
-                We connect you with the right funders and ensure your applications are prepared properly.
+                We facilitate introductions and structured submissions to suitable funders.
               </p>
               <div className="inline-flex items-center gap-3 px-5 py-3 bg-white/10 rounded-xl backdrop-blur-sm">
                 <div className="w-2 h-2 bg-[#0d9488] rounded-full" />
@@ -224,7 +224,7 @@ export default function About() {
             Ready to explore your options?
           </h2>
           <p className="text-slate-300 mb-8">
-            Start with a no-obligation eligibility check to see how we can help.
+            Start with an eligibility pre-check. Outcomes are subject to assessment and final approval by the relevant funder.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg" className="bg-[#0d9488] hover:bg-[#0f766e] text-white">

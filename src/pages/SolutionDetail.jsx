@@ -18,7 +18,7 @@ export default function SolutionDetail() {
       title: 'Residential Property Finance',
       subtitle: 'Finance for homes and residential properties',
       color: 'from-blue-500 to-blue-600',
-      overview: 'Whether you\'re buying your first home, upgrading, or looking to access equity in your existing property, we help you find the right finance pathway. We work with multiple funders to identify options that suit your circumstances.',
+      overview: 'Whether you\'re buying your first home, upgrading, or accessing equity in your existing property, we facilitate introductions and structured submissions to suitable funders. We work with multiple funders to identify options that suit your circumstances.',
       suitableFor: [
         'First-time buyers looking to purchase a home',
         'Existing homeowners wanting to refinance',
@@ -325,7 +325,7 @@ export default function SolutionDetail() {
               >
                 <h3 className="text-xl font-semibold mb-3">Ready to explore?</h3>
                 <p className="text-slate-300 mb-6">
-                  Start with an eligibility check to see if this solution might work for you.
+                  Start with an eligibility pre-check. Outcomes are subject to assessment and final approval by the relevant funder.
                 </p>
                 <Button asChild size="lg" className="w-full bg-[#0d9488] hover:bg-[#0f766e]">
                   <Link to={createPageUrl('EligibilityCheck') + `?solution=${type}`}>

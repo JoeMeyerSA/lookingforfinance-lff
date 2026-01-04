@@ -14,13 +14,13 @@ export default function HowItWorks() {
       number: '02',
       icon: Route,
       title: 'We confirm the right route',
-      description: 'Based on your profile, we identify the most appropriate funders and finance pathways.',
+      description: 'We assess your situation and identify suitable finance pathways and funders.',
     },
     {
       number: '03',
       icon: FileCheck,
       title: 'We prepare and submit',
-      description: 'When viable, we help package your application properly and submit to selected funders.',
+      description: 'We facilitate introductions and structured submissions to suitable funders.',
     },
   ];
 
