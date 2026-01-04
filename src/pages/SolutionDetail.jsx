@@ -1,5 +1,5 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useMemo } from 'react';
+import { Link, useSearchParams } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import { Button } from '@/components/ui/button';
 import { 
@@ -9,8 +9,8 @@ import {
 import { motion } from 'framer-motion';
 
 export default function SolutionDetail() {
-  const urlParams = new URLSearchParams(window.location.search);
-  const type = urlParams.get('type') || 'residential';
+  const [searchParams] = useSearchParams();
+  const type = useMemo(() => searchParams.get('type') || 'residential', [searchParams]);
 
   const solutions = {
     residential: {
