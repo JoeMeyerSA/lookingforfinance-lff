@@ -7,7 +7,6 @@ import {
   Home, Building2, Briefcase, Tractor, HardHat, Car, Sun,
   ArrowRight, CheckCircle
 } from 'lucide-react';
-import { motion } from 'framer-motion';
 
 export default function Solutions() {
   const solutions = [
@@ -74,11 +73,7 @@ export default function Solutions() {
       {/* Hero */}
       <section className="bg-[#1e3a5f] py-16 lg:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-          >
+          <div>
             <h1 className="text-4xl lg:text-5xl font-bold text-white mb-4">
               Finance Solutions
             </h1>
@@ -86,7 +81,7 @@ export default function Solutions() {
               Explore our range of finance pathways. We help you find the right route 
               and guide you through the process.
             </p>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -102,12 +97,8 @@ export default function Solutions() {
         <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 lg:gap-6">
             {solutions.map((solution, index) => (
-              <motion.div
+              <div
                 key={solution.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: index * 0.05 }}
                 className="group bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl hover:border-[#0d9488]/30 transition-all duration-300 flex flex-col"
               >
                 <div className="p-6 flex flex-col flex-1">
@@ -145,7 +136,7 @@ export default function Solutions() {
                     </Button>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
