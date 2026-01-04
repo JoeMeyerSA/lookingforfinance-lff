@@ -15,14 +15,14 @@ export default function TrustLayer({ variant = 'default' }) {
       </div>
 
       {/* What to Expect Next - Module */}
-      {!isCompact &&
-      <div className="pb-6 border-b border-slate-200 text-center">
-          <p className="bg-[#0d9488]/10 mb-2 px-3 py-1 rounded-sm inline-block">What to expect next</p>
-          <div className="inline-block px-3 py-1 bg-[#0d9488]/10 rounded-full mb-6">
-            <span className="text-xs font-medium text-[#0d9488]">No obligation to proceed</span>
+      {!isCompact && (
+        <div className="pb-6 border-b border-slate-200 text-center bg-slate-50 rounded-xl p-6">
+          <div className="inline-block px-3 py-1 bg-[#0d9488]/10 rounded-full mb-2">
+            <span className="text-xs font-medium text-[#0d9488]">Don't waste weeks — start with a protected 4-step route</span>
           </div>
+          <p className="text-xs text-slate-600 mb-6">You can apply to multiple banks and hope — or we match you to the funder most likely to consider your application.</p>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 mb-6">
             <div className="flex flex-col items-center text-center gap-2">
               <div className="w-10 h-10 bg-[#0d9488]/10 rounded-lg flex items-center justify-center flex-shrink-0">
                 <ClipboardCheck className="w-5 h-5 text-[#0d9488]" />
@@ -60,8 +60,13 @@ export default function TrustLayer({ variant = 'default' }) {
               </div>
             </div>
           </div>
+
+          <div className="text-xs text-slate-500 leading-relaxed space-y-1">
+            <p>Safety rail: If anything gets stuck during the assessment process, we'll unblock the next step within 1 business day.</p>
+            <p>Packaging cover: If a funder queries a submission due to how we packaged the information, we'll correct it and resubmit within 1 business day.</p>
+          </div>
         </div>
-      }
+      )}
 
       {/* Support Partners */}
       <div className={`${isCompact ? 'pt-3 pb-3' : 'pt-4 pb-4'} border-t border-slate-200`}>
@@ -93,26 +98,26 @@ export default function TrustLayer({ variant = 'default' }) {
         <p className="text-xs font-medium text-slate-700 mb-3 text-center">Working with multiple funders:</p>
         <div className="grid grid-cols-3 sm:grid-cols-6 gap-2 mb-3">
           {[
-          { label: 'Commercial banks', icon: Building2, color: 'text-blue-600' },
-          { label: 'Registered financial credit providers', icon: FileCheck, color: 'text-green-600' },
-          { label: 'Specialist lenders', icon: Target, color: 'text-purple-600' },
-          { label: 'Private investors', icon: Users2, color: 'text-indigo-600' },
-          { label: 'Asset finance houses', icon: TrendingUp, color: 'text-rose-600' },
-          { label: 'Solar & equipment finance', icon: Sun, color: 'text-amber-600' }].
-          map((item, i) =>
-          <div
-            key={i}
-            className="flex flex-col items-center justify-center px-2 py-3">
-
+            { label: 'Commercial banks', icon: Building2, color: 'text-blue-600' },
+            { label: 'Registered financial credit providers', icon: FileCheck, color: 'text-green-600' },
+            { label: 'Specialist lenders', icon: Target, color: 'text-purple-600' },
+            { label: 'Private investors', icon: Users2, color: 'text-indigo-600' },
+            { label: 'Asset finance houses', icon: TrendingUp, color: 'text-rose-600' },
+            { label: 'Solar & equipment finance', icon: Sun, color: 'text-amber-600' }
+          ].map((item, i) => (
+            <div
+              key={i}
+              className="flex flex-col items-center justify-center px-2 py-3"
+            >
               <item.icon className={`w-8 h-8 ${item.color} mb-2`} />
               <span className="text-xs text-slate-500 text-center leading-tight font-medium">{item.label}</span>
             </div>
-          )}
+          ))}
         </div>
         <p className="text-xs text-slate-500 leading-relaxed text-center">
           We work with commercial banks and our network of registered financial credit providers or investors. Options depend on fit and assessment.
         </p>
       </div>
-    </div>);
-
+    </div>
+  );
 }
