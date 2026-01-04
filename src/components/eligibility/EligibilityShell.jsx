@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
+import TrustLayer from '@/components/shared/TrustLayer';
 import { ArrowLeft, Shield, ChevronDown, ChevronUp } from 'lucide-react';
 
 export default function EligibilityShell({ 
@@ -93,6 +94,11 @@ export default function EligibilityShell({
                     <strong className="text-slate-700">Fees & Disclaimer:</strong> {feeDisclaimer}
                   </div>
                 )}
+
+                {/* Trust Layer */}
+                <div className="pt-6 border-t border-slate-200">
+                  <TrustLayer variant="compact" />
+                </div>
               </div>
             </div>
           </div>

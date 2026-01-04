@@ -1,6 +1,7 @@
 import React from 'react';
 import HeroSection from '@/components/home/HeroSection';
 import TrustStrip from '@/components/home/TrustStrip';
+import TrustLayer from '@/components/shared/TrustLayer';
 import PathCards from '@/components/home/PathCards';
 import HowItWorks from '@/components/home/HowItWorks';
 import CalculatorTeaser from '@/components/home/CalculatorTeaser';
@@ -10,6 +11,13 @@ export default function Home() {
   return (
     <div>
       <HeroSection />
+      <section className="py-12 bg-white border-b border-slate-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-md mx-auto">
+            <TrustLayer />
+          </div>
+        </div>
+      </section>
       <TrustStrip />
       <PathCards />
       <HowItWorks />
