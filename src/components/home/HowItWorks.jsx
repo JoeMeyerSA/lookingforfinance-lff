@@ -19,8 +19,8 @@ export default function HowItWorks() {
     {
       number: '03',
       icon: FileCheck,
-      title: 'We prepare and submit',
-      description: 'We facilitate introductions and structured submissions to suitable funders.',
+      title: 'We structure and submit',
+      description: 'We facilitate introductions and structured submissions to suitable funders, and support you through assessment and the final decision.',
     },
   ];
 
@@ -32,7 +32,7 @@ export default function HowItWorks() {
             How it works
           </h2>
           <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-            A clear, guided process from initial enquiry to application submission.
+            A clear, guided process from initial enquiry to structured submission.
           </p>
         </div>
 
