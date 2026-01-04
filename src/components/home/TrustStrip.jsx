@@ -21,7 +21,7 @@ export default function TrustStrip() {
     {
       icon: Clock,
       title: 'Quick Response',
-      text: 'We'll get back to you quickly',
+      text: 'We\'ll get back to you quickly',
     },
   ];
 
