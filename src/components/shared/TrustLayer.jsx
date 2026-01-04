@@ -39,7 +39,7 @@ export default function TrustLayer({ variant = 'default' }) {
           </div>
           <div>
             <p className="font-medium text-[#1e3a5f] text-sm">Matched to suitable options</p>
-            <p className="text-xs text-slate-600">Commercial banks + registered credit providers/investors.</p>
+            <p className="text-xs text-slate-600">Commercial banks + specialist lenders and investors.</p>
           </div>
         </div>
         <div className="flex flex-col items-center text-center gap-2">
@@ -80,8 +80,8 @@ export default function TrustLayer({ variant = 'default' }) {
               <BadgeCheck className="w-4 h-4 text-[#0d9488]" />
             </div>
             <div className="text-left">
-              <p className="text-xs font-medium text-[#1e3a5f]">FSP-registered advice</p>
-              <p className="text-xs text-slate-500">Franschhoek Consulting — FSP 5815</p>
+              <p className="text-xs font-medium text-[#1e3a5f]">Financial advice (when needed)</p>
+              <p className="text-xs text-slate-500">Franschhoek Consulting — Authorised FSP 5815</p>
             </div>
           </div>
         </div>
