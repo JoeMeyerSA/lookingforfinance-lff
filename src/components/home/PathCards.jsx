@@ -70,20 +70,20 @@ export default function PathCards() {
             >
               <Link
                 to={path.href}
-                className="group block h-full bg-white rounded-xl p-5 shadow-sm border-2 border-slate-100 hover:border-[#0d9488] hover:shadow-md transition-all duration-200"
+                className="group block h-full bg-white rounded-2xl p-6 shadow-sm border-2 border-slate-100 hover:border-[#0d9488] hover:shadow-xl transition-all duration-300"
               >
-                <div className={`w-12 h-12 rounded-lg bg-gradient-to-br ${path.color} flex items-center justify-center mb-3`}>
-                  <path.icon className="w-6 h-6 text-white" />
+                <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${path.color} flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg`}>
+                  <path.icon className="w-7 h-7 text-white" />
                 </div>
-                <h3 className="text-base font-bold text-[#1e3a5f] mb-1.5">
+                <h3 className="text-base font-bold text-[#1e3a5f] mb-2 group-hover:text-[#0d9488] transition-colors">
                   {path.title}
                 </h3>
                 <p className="text-xs text-slate-600 mb-3 leading-snug">
                   {path.description}
                 </p>
                 <div className="flex items-center text-[#0d9488] text-xs font-semibold pt-2 border-t border-slate-100">
-                  Start check
-                  <ArrowRight className="w-3.5 h-3.5 ml-1 group-hover:translate-x-0.5 transition-transform" />
+                  Get started →
+                  <ArrowRight className="w-3.5 h-3.5 ml-1 group-hover:translate-x-1 transition-transform" />
                 </div>
               </Link>
             </motion.div>
