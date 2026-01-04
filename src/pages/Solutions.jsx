@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import { Button } from '@/components/ui/button';
+import TrustLayer from '@/components/shared/TrustLayer';
 import { 
   Home, Building2, Briefcase, Tractor, HardHat, Car, Sun,
   ArrowRight, CheckCircle
@@ -86,6 +87,15 @@ export default function Solutions() {
               and guide you through the process.
             </p>
           </motion.div>
+        </div>
+      </section>
+
+      {/* Trust Layer */}
+      <section className="py-12 bg-white border-b border-slate-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-md mx-auto">
+            <TrustLayer />
+          </div>
         </div>
       </section>
 
