@@ -1,5 +1,5 @@
-import React, { useMemo } from 'react';
-import { Link, useSearchParams } from 'react-router-dom';
+import React from 'react';
+import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import { Button } from '@/components/ui/button';
 import { 
@@ -9,8 +9,8 @@ import {
 import { motion } from 'framer-motion';
 
 export default function SolutionDetail() {
-  const [searchParams] = useSearchParams();
-  const type = useMemo(() => searchParams.get('type') || 'residential', [searchParams]);
+  const urlParams = new URLSearchParams(window.location.search);
+  const type = urlParams.get('type') || 'residential';
 
   const solutions = {
     residential: {
@@ -242,25 +242,15 @@ export default function SolutionDetail() {
             {/* Main Content */}
             <div className="lg:col-span-2 space-y-8">
               {/* Overview */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4 }}
-                className="bg-white rounded-2xl p-6 lg:p-8 shadow-sm"
-              >
+              <div className="bg-white rounded-2xl p-6 lg:p-8 shadow-sm">
                 <h2 className="text-xl font-semibold text-[#1e3a5f] mb-4">Overview</h2>
                 <p className="text-slate-600 leading-relaxed">
                   {solution.overview}
                 </p>
-              </motion.div>
+              </div>
 
               {/* Suitable For */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: 0.1 }}
-                className="bg-white rounded-2xl p-6 lg:p-8 shadow-sm"
-              >
+              <div className="bg-white rounded-2xl p-6 lg:p-8 shadow-sm">
                 <h2 className="text-xl font-semibold text-[#1e3a5f] mb-4">This may be suitable for</h2>
                 <ul className="space-y-3">
                   {solution.suitableFor.map((item, index) => (
@@ -270,15 +260,10 @@ export default function SolutionDetail() {
                     </li>
                   ))}
                 </ul>
-              </motion.div>
+              </div>
 
               {/* Process */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: 0.2 }}
-                className="bg-white rounded-2xl p-6 lg:p-8 shadow-sm"
-              >
+              <div className="bg-white rounded-2xl p-6 lg:p-8 shadow-sm">
                 <h2 className="text-xl font-semibold text-[#1e3a5f] mb-4">Our process</h2>
                 <ol className="space-y-4">
                   {solution.process.map((step, index) => (
@@ -290,15 +275,10 @@ export default function SolutionDetail() {
                     </li>
                   ))}
                 </ol>
-              </motion.div>
+              </div>
 
               {/* Considerations */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: 0.3 }}
-                className="bg-amber-50 border border-amber-200 rounded-2xl p-6 lg:p-8"
-              >
+              <div className="bg-amber-50 border border-amber-200 rounded-2xl p-6 lg:p-8">
                 <div className="flex items-start gap-3 mb-4">
                   <AlertCircle className="w-6 h-6 text-amber-600 flex-shrink-0" />
                   <h2 className="text-xl font-semibold text-amber-900">Key considerations</h2>
@@ -311,18 +291,13 @@ export default function SolutionDetail() {
                     </li>
                   ))}
                 </ul>
-              </motion.div>
+              </div>
             </div>
 
             {/* Sidebar */}
             <div className="space-y-6">
               {/* CTA Card */}
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.4, delay: 0.2 }}
-                className="bg-[#1e3a5f] rounded-2xl p-6 lg:p-8 text-white sticky top-24"
-              >
+              <div className="bg-[#1e3a5f] rounded-2xl p-6 lg:p-8 text-white sticky top-24">
                 <h3 className="text-xl font-semibold mb-3">Ready to explore?</h3>
                 <p className="text-slate-300 mb-6">
                   Start with an eligibility pre-check. Outcomes are subject to assessment and final approval by the relevant funder.
@@ -340,15 +315,10 @@ export default function SolutionDetail() {
                     <span>No obligation • Takes 5 minutes</span>
                   </div>
                 </div>
-              </motion.div>
+              </div>
 
               {/* Calculator Link */}
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.4, delay: 0.3 }}
-                className="bg-white rounded-2xl p-6 shadow-sm"
-              >
+              <div className="bg-white rounded-2xl p-6 shadow-sm">
                 <h3 className="font-semibold text-[#1e3a5f] mb-2">Use our calculators</h3>
                 <p className="text-sm text-slate-600 mb-4">
                   Get an estimate of potential monthly payments.
@@ -358,7 +328,7 @@ export default function SolutionDetail() {
                     Open Calculators
                   </Link>
                 </Button>
-              </motion.div>
+              </div>
             </div>
           </div>
         </div>
