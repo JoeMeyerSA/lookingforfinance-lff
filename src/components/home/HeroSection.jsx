@@ -27,7 +27,7 @@ export default function HeroSection() {
               <span className="text-[#0d9488]">made simple.</span>
             </h1>
             <p className="text-lg sm:text-xl text-slate-300 mb-8 leading-relaxed max-w-xl">
-              From first-time buyers to business owners—we connect you with the right funders and guide you every step of the way.
+              From individuals to business owners—we connect you with the right funders and guide you every step of the way.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-10">
@@ -89,7 +89,7 @@ export default function HeroSection() {
                       <CheckCircle className="w-6 h-6 text-white" />
                     </div>
                     <div>
-                      <p className="text-white font-semibold">Eligibility confirmed ✓</p>
+                      <p className="text-white font-semibold">Eligibility pre-check completed</p>
                       <p className="text-slate-300 text-sm">Multiple options available</p>
                     </div>
                   </motion.div>

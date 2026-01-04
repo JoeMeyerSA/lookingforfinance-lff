@@ -20,7 +20,7 @@ export default function Calculators() {
   const [hasResults, setHasResults] = useState(false);
 
   const tabs = [
-    { id: 'mortgage', label: 'Mortgage', icon: Home, color: 'bg-blue-500' },
+    { id: 'mortgage', label: 'Residential Property', icon: Home, color: 'bg-blue-500' },
     { id: 'solar', label: 'Solar', icon: Sun, color: 'bg-amber-500' },
     { id: 'vehicle', label: 'Vehicle', icon: Car, color: 'bg-purple-500' },
     { id: 'business', label: 'Business', icon: Briefcase, color: 'bg-green-500' },

@@ -5,23 +5,23 @@ export default function TrustStrip() {
   const trustItems = [
     {
       icon: Shield,
-      title: '15+ Years',
+      title: 'Decades of Experience',
       text: 'Registered financial intermediary',
     },
     {
       icon: Users,
-      title: '500+ Clients',
+      title: 'Multiple Sectors',
       text: 'Individuals & businesses helped',
     },
     {
       icon: Award,
-      title: 'No Upfront Fees',
-      text: 'Initial consultation is free',
+      title: 'Free Pre-Check',
+      text: 'Eligibility pre-check is free',
     },
     {
       icon: Clock,
-      title: '48hr Response',
-      text: 'We get back to you quickly',
+      title: 'Quick Response',
+      text: 'We'll get back to you quickly',
     },
   ];
 

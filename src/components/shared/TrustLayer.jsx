@@ -21,7 +21,7 @@ export default function TrustLayer({ variant = 'default' }) {
             <Shield className="w-5 h-5 text-[#0d9488]" />
           </div>
           <div>
-            <p className="font-medium text-[#1e3a5f] text-sm">15+ years experience</p>
+            <p className="font-medium text-[#1e3a5f] text-sm">Decades of experience</p>
             <p className="text-xs text-slate-600">Facilitating finance across multiple sectors</p>
           </div>
         </div>

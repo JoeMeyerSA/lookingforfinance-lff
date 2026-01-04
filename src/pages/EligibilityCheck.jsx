@@ -34,12 +34,12 @@ export default function EligibilityCheck() {
         </>
       ),
       trustPoints: [
-        '15+ years helping individuals secure finance',
+        'Decades of experience helping individuals secure finance',
         'No obligation — just honest guidance',
         'We work with multiple funders to find the best fit',
         'Free initial consultation',
       ],
-      feeDisclaimer: 'Initial eligibility pre-check is free. If we proceed to application, fees depend on the finance type and will be explained upfront. You only pay if we successfully help you.',
+      feeDisclaimer: 'The initial eligibility pre-check is free. If we proceed, any fees (if applicable) are explained upfront before you decide.',
       component: IndividualFlow,
     },
     business: {
@@ -58,7 +58,7 @@ export default function EligibilityCheck() {
         'Honest assessment of your options',
         'Help structuring your application properly',
       ],
-      feeDisclaimer: 'Initial pre-check is free. Application fees vary by finance type and amount. We explain all costs before proceeding.',
+      feeDisclaimer: 'The initial eligibility pre-check is free. If we proceed, any fees (if applicable) are explained upfront before you decide.',
       component: BusinessFlow,
     },
     farmer: {
@@ -77,7 +77,7 @@ export default function EligibilityCheck() {
         'Understanding of seasonal cash flows',
         'Support through the application process',
       ],
-      feeDisclaimer: 'Pre-check is free. Success fees apply if we help secure funding. All costs explained upfront.',
+      feeDisclaimer: 'The initial eligibility pre-check is free. If we proceed, any fees (if applicable) are explained upfront before you decide.',
       component: FarmerFlow,
     },
     developer: {
@@ -96,7 +96,7 @@ export default function EligibilityCheck() {
         'Help structuring deals properly',
         'Guidance on phasing and drawdowns',
       ],
-      feeDisclaimer: 'Pre-check is free. Development finance fees vary by project size and complexity. Transparent fee structure explained before proceeding.',
+      feeDisclaimer: 'The initial eligibility pre-check is free. If we proceed, any fees (if applicable) are explained upfront before you decide.',
       component: DeveloperFlow,
     },
     solar: {
@@ -115,7 +115,7 @@ export default function EligibilityCheck() {
         'Guidance on realistic payback periods',
         'Support from pre-check to installation',
       ],
-      feeDisclaimer: 'Pre-check is free. Finance arrangement fees apply if successful. All fees explained clearly before commitment.',
+      feeDisclaimer: 'The initial eligibility pre-check is free. If we proceed, any fees (if applicable) are explained upfront before you decide.',
       component: SolarFlow,
     },
   };
