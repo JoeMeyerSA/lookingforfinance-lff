@@ -5,19 +5,41 @@ import { Slider } from '@/components/ui/slider';
 import { Switch } from '@/components/ui/switch';
 import { Car, TrendingUp, Calendar, AlertCircle } from 'lucide-react';
 
-export default function VehicleCalculator() {
-  const [values, setValues] = useState({
-    vehiclePrice: 450000,
-    deposit: 45000,
-    interestRate: 12.5,
-    term: 5,
-    includeBalloon: false,
-    balloonPercent: 20,
+const STORAGE_KEY = 'vehicle_calculator_values';
+
+export default function VehicleCalculator({ onGuidanceChange, onResultsChange }) {
+  const [values, setValues] = useState(() => {
+    const saved = localStorage.getItem(STORAGE_KEY);
+    return saved ? JSON.parse(saved) : {
+      vehiclePrice: 450000,
+      deposit: 45000,
+      interestRate: 12.5,
+      term: 5,
+      includeBalloon: false,
+      balloonPercent: 20,
+    };
   });
 
   const [results, setResults] = useState(null);
+  const [errors, setErrors] = useState({});
+
+  const validate = () => {
+    const newErrors = {};
+    if (values.vehiclePrice < 10000) newErrors.vehiclePrice = 'Vehicle price should be at least R 10,000';
+    if (values.deposit > values.vehiclePrice) newErrors.deposit = 'Deposit cannot exceed vehicle price';
+    if (values.interestRate < 1 || values.interestRate > 30) newErrors.interestRate = 'Interest rate should be between 1% and 30%';
+    if (values.term < 1 || values.term > 7) newErrors.term = 'Term should be between 1 and 7 years';
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
 
   const calculate = () => {
+    if (!validate()) {
+      setResults(null);
+      onResultsChange?.(false);
+      return;
+    }
+
     const principal = values.vehiclePrice - values.deposit;
     const monthlyRate = values.interestRate / 100 / 12;
     const numberOfPayments = values.term * 12;
@@ -34,7 +56,6 @@ export default function VehicleCalculator() {
         balloonAmount,
       });
     } else {
-      // Standard amortisation with balloon
       const monthlyPayment = financedAmount * (monthlyRate * Math.pow(1 + monthlyRate, numberOfPayments)) / (Math.pow(1 + monthlyRate, numberOfPayments) - 1);
       const totalPayment = monthlyPayment * numberOfPayments + balloonAmount;
       
@@ -46,9 +67,11 @@ export default function VehicleCalculator() {
         balloonAmount,
       });
     }
+    onResultsChange?.(true);
   };
 
   useEffect(() => {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(values));
     calculate();
   }, [values]);
 
@@ -65,6 +88,26 @@ export default function VehicleCalculator() {
 
   return (
     <div className="space-y-8">
+      {/* Guidance Triggers */}
+      <div className="flex gap-2 mb-4">
+        <button onClick={() => onGuidanceChange?.('default')} className="text-xs px-3 py-1 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700 transition-colors">
+          About this calculator
+        </button>
+        <button onClick={() => onGuidanceChange?.('input')} className="text-xs px-3 py-1 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700 transition-colors">
+          Input help
+        </button>
+        {results && (
+          <>
+            <button onClick={() => onGuidanceChange?.('results')} className="text-xs px-3 py-1 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700 transition-colors">
+              Understand results
+            </button>
+            <button onClick={() => onGuidanceChange?.('next')} className="text-xs px-3 py-1 rounded-full bg-[#0d9488]/10 hover:bg-[#0d9488]/20 text-[#0d9488] transition-colors">
+              Next step
+            </button>
+          </>
+        )}
+      </div>
+
       {/* Inputs */}
       <div className="space-y-6">
         <div>
@@ -77,8 +120,11 @@ export default function VehicleCalculator() {
               type="number"
               value={values.vehiclePrice}
               onChange={(e) => setValues({ ...values, vehiclePrice: Number(e.target.value) })}
-              className="pl-8"
+              className={`pl-8 ${errors.vehiclePrice ? 'border-red-500' : ''}`}
             />
+            {errors.vehiclePrice && (
+              <p className="text-xs text-red-600 mt-1">{errors.vehiclePrice}</p>
+            )}
           </div>
           <Slider
             value={[values.vehiclePrice]}
@@ -104,8 +150,11 @@ export default function VehicleCalculator() {
               type="number"
               value={values.deposit}
               onChange={(e) => setValues({ ...values, deposit: Number(e.target.value) })}
-              className="pl-8"
+              className={`pl-8 ${errors.deposit ? 'border-red-500' : ''}`}
             />
+            {errors.deposit && (
+              <p className="text-xs text-red-600 mt-1">{errors.deposit}</p>
+            )}
           </div>
           <Slider
             value={[values.deposit]}
@@ -127,7 +176,11 @@ export default function VehicleCalculator() {
               step="0.25"
               value={values.interestRate}
               onChange={(e) => setValues({ ...values, interestRate: Number(e.target.value) })}
+              className={errors.interestRate ? 'border-red-500' : ''}
             />
+            {errors.interestRate && (
+              <p className="text-xs text-red-600 mt-1">{errors.interestRate}</p>
+            )}
           </div>
           <div>
             <Label className="text-sm font-medium text-slate-700 mb-2 block">
@@ -139,7 +192,11 @@ export default function VehicleCalculator() {
               onChange={(e) => setValues({ ...values, term: Number(e.target.value) })}
               min={1}
               max={7}
+              className={errors.term ? 'border-red-500' : ''}
             />
+            {errors.term && (
+              <p className="text-xs text-red-600 mt-1">{errors.term}</p>
+            )}
           </div>
         </div>
 
