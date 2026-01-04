@@ -90,7 +90,7 @@ export default function Solutions() {
       </section>
 
       {/* Trust Layer */}
-      <section className="py-12 lg:py-16 bg-white border-b border-slate-100">
+      <section className="py-6 lg:py-8 bg-white border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <TrustLayer />
         </div>
