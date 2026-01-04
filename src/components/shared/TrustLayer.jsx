@@ -1,5 +1,5 @@
 import React from 'react';
-import { Shield, CheckCircle, Users, Calculator, BadgeCheck, Building2, FileCheck, Target, Users2, TrendingUp, Sun } from 'lucide-react';
+import { Shield, CheckCircle, Users, Calculator, BadgeCheck, Building2, FileCheck, Target, Users2, TrendingUp, Sun, ClipboardCheck, Network, FileText, Bell } from 'lucide-react';
 
 export default function TrustLayer({ variant = 'default' }) {
   const isCompact = variant === 'compact';
@@ -14,33 +14,50 @@ export default function TrustLayer({ variant = 'default' }) {
         </p>
       </div>
 
-      {/* Proof Points */}
-      <div className={isCompact ? 'space-y-3' : 'grid sm:grid-cols-3 gap-6 lg:gap-8'}>
+      {/* What to Expect Next */}
+      <div className={`${isCompact ? 'pb-4' : 'pb-6'} border-b border-slate-200 text-center`}>
+        <p className="text-sm font-medium text-[#1e3a5f] mb-2">What to expect next</p>
+        <div className="inline-block px-3 py-1 bg-[#0d9488]/10 rounded-full">
+          <span className="text-xs font-medium text-[#0d9488]">No obligation</span>
+        </div>
+      </div>
+
+      {/* Process Steps */}
+      <div className={isCompact ? 'space-y-3' : 'grid sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8'}>
         <div className="flex flex-col items-center text-center gap-2">
           <div className="w-10 h-10 bg-[#0d9488]/10 rounded-lg flex items-center justify-center flex-shrink-0">
-            <Shield className="w-5 h-5 text-[#0d9488]" />
+            <ClipboardCheck className="w-5 h-5 text-[#0d9488]" />
           </div>
           <div>
-            <p className="font-medium text-[#1e3a5f] text-sm">Decades of experience</p>
-            <p className="text-xs text-slate-600">Facilitating finance across multiple sectors</p>
+            <p className="font-medium text-[#1e3a5f] text-sm">Pre-check first</p>
+            <p className="text-xs text-slate-600">We confirm fit before paperwork.</p>
           </div>
         </div>
         <div className="flex flex-col items-center text-center gap-2">
           <div className="w-10 h-10 bg-[#0d9488]/10 rounded-lg flex items-center justify-center flex-shrink-0">
-            <CheckCircle className="w-5 h-5 text-[#0d9488]" />
+            <Network className="w-5 h-5 text-[#0d9488]" />
           </div>
           <div>
-            <p className="font-medium text-[#1e3a5f] text-sm">Disciplined process</p>
-            <p className="text-xs text-slate-600">Proper assessment and documentation</p>
+            <p className="font-medium text-[#1e3a5f] text-sm">Matched to suitable options</p>
+            <p className="text-xs text-slate-600">Commercial banks + registered credit providers/investors.</p>
           </div>
         </div>
         <div className="flex flex-col items-center text-center gap-2">
           <div className="w-10 h-10 bg-[#0d9488]/10 rounded-lg flex items-center justify-center flex-shrink-0">
-            <Users className="w-5 h-5 text-[#0d9488]" />
+            <FileText className="w-5 h-5 text-[#0d9488]" />
           </div>
           <div>
-            <p className="font-medium text-[#1e3a5f] text-sm">Responsible guidance</p>
-            <p className="text-xs text-slate-600">We won't push unsuitable finance</p>
+            <p className="font-medium text-[#1e3a5f] text-sm">Structured packaging</p>
+            <p className="text-xs text-slate-600">Documents only when you choose to proceed.</p>
+          </div>
+        </div>
+        <div className="flex flex-col items-center text-center gap-2">
+          <div className="w-10 h-10 bg-[#0d9488]/10 rounded-lg flex items-center justify-center flex-shrink-0">
+            <Bell className="w-5 h-5 text-[#0d9488]" />
+          </div>
+          <div>
+            <p className="font-medium text-[#1e3a5f] text-sm">Clear updates</p>
+            <p className="text-xs text-slate-600">We keep you informed at each step.</p>
           </div>
         </div>
       </div>
