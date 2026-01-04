@@ -6,14 +6,6 @@ export default function TrustLayer({ variant = 'default' }) {
 
   return (
     <div className={isCompact ? 'space-y-4' : 'space-y-6'}>
-      {/* Association */}
-      <div className={`${isCompact ? 'pb-4' : 'pb-6'} border-b border-slate-200 text-center`}>
-        <p className="text-sm text-slate-600">
-          In association with{' '}
-          <span className="font-semibold text-[#1e3a5f]">@360 Finance Stellenbosch</span>
-        </p>
-      </div>
-
       {/* What to Expect Next - Module */}
       {!isCompact && (
         <div className="pb-6 border-b border-slate-200 text-center bg-slate-50 rounded-xl p-6">
