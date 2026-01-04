@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import { Button } from '@/components/ui/button';
@@ -10,6 +10,12 @@ import {
 export default function SolutionDetail() {
   const [searchParams] = useSearchParams();
   const type = searchParams.get('type') || 'residential';
+
+  useEffect(() => {
+    console.log('SolutionDetail loaded - type from URL:', searchParams.get('type'));
+    console.log('Full URL:', window.location.href);
+    console.log('Using solution type:', type);
+  }, [searchParams, type]);
 
   const solutions = {
     residential: {
