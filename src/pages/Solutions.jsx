@@ -108,9 +108,9 @@ export default function Solutions() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: index * 0.05 }}
-                className="group bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl hover:border-[#0d9488]/30 transition-all duration-300"
+                className="group bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl hover:border-[#0d9488]/30 transition-all duration-300 flex flex-col"
               >
-                <div className="p-6">
+                <div className="p-6 flex flex-col flex-1">
                   <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${solution.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
                     <solution.icon className="w-6 h-6 text-white" />
                   </div>
@@ -131,7 +131,7 @@ export default function Solutions() {
                     ))}
                   </ul>
 
-                  <div className="space-y-2">
+                  <div className="space-y-2 mt-auto">
                     <Button asChild size="sm" className="w-full bg-[#0d9488] hover:bg-[#0f766e] text-sm">
                       <Link to={createPageUrl('EligibilityCheck') + `?solution=${solution.id}`}>
                         Check Eligibility
