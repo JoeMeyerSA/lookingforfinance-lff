@@ -84,9 +84,9 @@ export default function TrustLayer({ variant = 'default' }) {
           ].map((item, i) => (
             <div
               key={i}
-              className="h-16 flex flex-col items-center justify-center px-2 py-2"
+              className="flex flex-col items-center justify-center px-2 py-3"
             >
-              <item.icon className={`w-5 h-5 ${item.color} mb-1`} />
+              <item.icon className={`w-8 h-8 ${item.color} mb-2`} />
               <span className="text-xs text-slate-500 text-center leading-tight font-medium">{item.label}</span>
             </div>
           ))}
