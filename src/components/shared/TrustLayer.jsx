@@ -17,7 +17,8 @@ export default function TrustLayer({ variant = 'default' }) {
       {/* What to Expect Next - Module */}
       {!isCompact && (
         <div className="pb-6 border-b border-slate-200 text-center bg-slate-50 rounded-xl p-6">
-          <p className="text-sm font-medium text-[#1e3a5f] mb-2">What to expect next</p>
+          <p className="text-sm font-medium text-[#1e3a5f] mb-2">Don't waste weeks — start with a protected 4-step route</p>
+          <p className="text-xs text-slate-600 mb-3">You can chase one bank and lose weeks — or follow a guided 4-step route that gets you to a decision faster.</p>
           <div className="inline-block px-3 py-1 bg-[#0d9488]/10 rounded-full mb-6">
             <span className="text-xs font-medium text-[#0d9488]">Your next 4 steps</span>
           </div>
@@ -62,8 +63,8 @@ export default function TrustLayer({ variant = 'default' }) {
           </div>
 
           <div className="text-xs text-slate-500 leading-relaxed space-y-1">
-            <p>Safety rail: If anything gets stuck during the assessment process, we'll get the wheels turning again within 1 business day.</p>
-            <p>If a funder queries a submission due to how we packaged the information, we'll correct it and resubmit within 1 business day.</p>
+            <p>Safety rail: If anything gets stuck during the assessment process, we'll unblock the next step within 1 business day.</p>
+            <p>Packaging cover: If a funder queries a submission due to how we packaged the information, we'll correct it and resubmit within 1 business day.</p>
           </div>
         </div>
       )}
