@@ -46,16 +46,20 @@ export default function PathCards() {
   return (
     <section className="py-16 lg:py-24 bg-slate-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl lg:text-4xl font-bold text-[#1e3a5f] mb-4">
+        <div className="text-center mb-8">
+          <h2 className="text-3xl lg:text-4xl font-bold text-[#1e3a5f] mb-3">
             Choose your path
           </h2>
-          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-            Select the category that best describes your situation to get started with a tailored eligibility check.
+          <p className="text-lg text-slate-600 max-w-2xl mx-auto mb-6">
+            Select your category to start a tailored eligibility check
           </p>
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 rounded-lg">
+            <div className="w-1.5 h-1.5 bg-blue-500 rounded-full"></div>
+            <p className="text-sm text-blue-800">Takes 5 minutes • No documents needed yet • Free consultation</p>
+          </div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 lg:gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
           {paths.map((path, index) => (
             <motion.div
               key={path.title}
@@ -66,20 +70,20 @@ export default function PathCards() {
             >
               <Link
                 to={path.href}
-                className="group block h-full bg-white rounded-2xl p-6 shadow-sm border border-slate-100 hover:shadow-lg hover:border-[#0d9488]/30 transition-all duration-300"
+                className="group block h-full bg-white rounded-xl p-5 shadow-sm border-2 border-slate-100 hover:border-[#0d9488] hover:shadow-md transition-all duration-200"
               >
-                <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${path.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                  <path.icon className="w-7 h-7 text-white" />
+                <div className={`w-12 h-12 rounded-lg bg-gradient-to-br ${path.color} flex items-center justify-center mb-3`}>
+                  <path.icon className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-lg font-semibold text-[#1e3a5f] mb-2 group-hover:text-[#0d9488] transition-colors">
+                <h3 className="text-base font-bold text-[#1e3a5f] mb-1.5">
                   {path.title}
                 </h3>
-                <p className="text-sm text-slate-600 mb-4 leading-relaxed">
+                <p className="text-xs text-slate-600 mb-3 leading-snug">
                   {path.description}
                 </p>
-                <div className="flex items-center text-[#0d9488] text-sm font-medium">
-                  Get started
-                  <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                <div className="flex items-center text-[#0d9488] text-xs font-semibold pt-2 border-t border-slate-100">
+                  Start check
+                  <ArrowRight className="w-3.5 h-3.5 ml-1 group-hover:translate-x-0.5 transition-transform" />
                 </div>
               </Link>
             </motion.div>

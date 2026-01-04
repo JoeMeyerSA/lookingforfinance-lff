@@ -46,19 +46,23 @@ export default function HeroSection() {
               </Button>
             </div>
 
-            <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-slate-300">
-              <span className="flex items-center gap-2">
-                <CheckCircle className="w-4 h-4 text-[#0d9488]" />
-                No obligation
-              </span>
-              <span className="flex items-center gap-2">
-                <CheckCircle className="w-4 h-4 text-[#0d9488]" />
-                Clear guidance
-              </span>
-              <span className="flex items-center gap-2">
-                <CheckCircle className="w-4 h-4 text-[#0d9488]" />
-                Expert support
-              </span>
+            {/* What Happens Next */}
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 p-5 max-w-lg">
+              <p className="text-white font-medium mb-3 text-sm">What happens next:</p>
+              <ol className="space-y-2 text-sm text-slate-300">
+                <li className="flex items-start gap-3">
+                  <span className="flex-shrink-0 w-5 h-5 bg-[#0d9488] rounded-full flex items-center justify-center text-white text-xs font-medium">1</span>
+                  <span>Quick online eligibility check (5 minutes, no documents needed)</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="flex-shrink-0 w-5 h-5 bg-[#0d9488] rounded-full flex items-center justify-center text-white text-xs font-medium">2</span>
+                  <span>We'll review and contact you within 1-2 business days</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="flex-shrink-0 w-5 h-5 bg-[#0d9488] rounded-full flex items-center justify-center text-white text-xs font-medium">3</span>
+                  <span>If you proceed, we'll guide you through documentation and application</span>
+                </li>
+              </ol>
             </div>
           </motion.div>
 
