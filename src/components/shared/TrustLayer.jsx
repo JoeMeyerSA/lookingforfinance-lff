@@ -17,10 +17,10 @@ export default function TrustLayer({ variant = 'default' }) {
       {/* What to Expect Next - Module */}
       {!isCompact && (
         <div className="pb-6 border-b border-slate-200 text-center bg-slate-50 rounded-xl p-6">
-          <div className="inline-block px-3 py-1 bg-[#0d9488]/10 rounded-full mb-2">
-            <span className="text-xs font-medium text-[#0d9488]">Don't waste weeks — start with a protected 4-step route</span>
+          <div className="inline-block px-3 py-1 bg-[#0d9488]/10 mb-2" style={{ borderRadius: '2px' }}>
+            <span className="text-sm font-medium text-[#0d9488]">Don't waste weeks — start with a protected 4-step route</span>
           </div>
-          <p className="text-xs text-slate-600 mb-6">You can apply to multiple banks and hope — or we match you to the funder most likely to consider your application.</p>
+          <p className="text-xs font-semibold text-slate-600 mb-6">You can apply to multiple banks and hope — or we match you to the funder most likely to consider your application.</p>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 mb-6">
             <div className="flex flex-col items-center text-center gap-2">
@@ -62,8 +62,8 @@ export default function TrustLayer({ variant = 'default' }) {
           </div>
 
           <div className="text-xs text-slate-500 leading-relaxed space-y-1">
-            <p>Safety rail: If anything gets stuck during the assessment process, we'll unblock the next step within 1 business day.</p>
-            <p>Packaging cover: If a funder queries a submission due to how we packaged the information, we'll correct it and resubmit within 1 business day.</p>
+            <p>If anything gets stuck during the assessment process, we'll unblock the next step within 1 business day.</p>
+            <p>If a funder queries a submission due to how we packaged the information, we'll correct it and resubmit within 1 business day.</p>
           </div>
         </div>
       )}
