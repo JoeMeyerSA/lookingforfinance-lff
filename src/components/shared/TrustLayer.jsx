@@ -20,7 +20,7 @@ export default function TrustLayer({ variant = 'default' }) {
           <div className="inline-block px-3 py-1 bg-[#0d9488]/10 rounded-full mb-2">
             <span className="text-xs font-medium text-[#0d9488]">Don't waste weeks — start with a protected 4-step route</span>
           </div>
-          <p className="text-xs text-slate-600 mb-6">You can chase one bank and lose weeks — or follow a guided 4-step route that gets you to a decision faster.</p>
+          <p className="text-xs text-slate-600 mb-6">You can apply to multiple banks and hope — or we match you to the funder most likely to consider your application.</p>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 mb-6">
             <div className="flex flex-col items-center text-center gap-2">
