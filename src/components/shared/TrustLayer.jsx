@@ -16,7 +16,7 @@ export default function TrustLayer({ variant = 'default' }) {
 
       {/* What to Expect Next - Module */}
       {!isCompact && (
-        <div className="pb-6 border-b border-slate-200 text-center">
+        <div className="pb-6 border-b border-slate-200 text-center bg-slate-50 rounded-xl p-6">
           <p className="text-sm font-medium text-[#1e3a5f] mb-2">What to expect next</p>
           <div className="inline-block px-3 py-1 bg-[#0d9488]/10 rounded-full mb-6">
             <span className="text-xs font-medium text-[#0d9488]">Your next 4 steps</span>
