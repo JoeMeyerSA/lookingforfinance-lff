@@ -1,5 +1,5 @@
 import React from 'react';
-import { Shield, CheckCircle, Users } from 'lucide-react';
+import { Shield, CheckCircle, Users, Calculator, BadgeCheck } from 'lucide-react';
 
 export default function TrustLayer({ variant = 'default' }) {
   const isCompact = variant === 'compact';
@@ -47,9 +47,27 @@ export default function TrustLayer({ variant = 'default' }) {
 
       {/* Support Partners */}
       <div className={`${isCompact ? 'pt-3 pb-3' : 'pt-4 pb-4'} border-t border-slate-200`}>
-        <p className="text-xs text-slate-600 text-center leading-relaxed">
-          Specialist support when needed: accounting (TaxShop Stellenbosch) and FSP-registered advice (Franschhoek Consulting — FSP 5815).
-        </p>
+        <p className="text-xs font-medium text-slate-700 mb-3 text-center">Specialist support when needed:</p>
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8">
+          <div className="flex items-center gap-2">
+            <div className="w-8 h-8 bg-blue-500/10 rounded-lg flex items-center justify-center flex-shrink-0">
+              <Calculator className="w-4 h-4 text-blue-600" />
+            </div>
+            <div className="text-left">
+              <p className="text-xs font-medium text-[#1e3a5f]">Accounting</p>
+              <p className="text-xs text-slate-500">TaxShop Stellenbosch</p>
+            </div>
+          </div>
+          <div className="flex items-center gap-2">
+            <div className="w-8 h-8 bg-[#0d9488]/10 rounded-lg flex items-center justify-center flex-shrink-0">
+              <BadgeCheck className="w-4 h-4 text-[#0d9488]" />
+            </div>
+            <div className="text-left">
+              <p className="text-xs font-medium text-[#1e3a5f]">FSP-registered advice</p>
+              <p className="text-xs text-slate-500">Franschhoek Consulting — FSP 5815</p>
+            </div>
+          </div>
+        </div>
       </div>
 
       {/* Funder Panel */}
