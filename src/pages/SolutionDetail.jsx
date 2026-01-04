@@ -1,16 +1,15 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import { Button } from '@/components/ui/button';
 import { 
   Home, Building2, Briefcase, Tractor, HardHat, Car, Sun,
   ArrowRight, ArrowLeft, CheckCircle, AlertCircle, FileText
 } from 'lucide-react';
-import { motion } from 'framer-motion';
 
 export default function SolutionDetail() {
-  const urlParams = new URLSearchParams(window.location.search);
-  const type = urlParams.get('type') || 'residential';
+  const [searchParams] = useSearchParams();
+  const type = searchParams.get('type') || 'residential';
 
   const solutions = {
     residential: {
@@ -205,11 +204,7 @@ export default function SolutionDetail() {
       {/* Hero */}
       <section className={`bg-gradient-to-br ${solution.color} py-16 lg:py-20`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-          >
+          <div>
             <Link 
               to={createPageUrl('Solutions')}
               className="inline-flex items-center gap-2 text-white/80 hover:text-white mb-6 transition-colors"
@@ -231,7 +226,7 @@ export default function SolutionDetail() {
                 </p>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
