@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { createPageUrl } from '@/utils';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { 
-  Shield, Home, Car, Heart, Briefcase, Umbrella, Users,
-  ArrowRight, CheckCircle, Phone, Mail
+  Shield, Home, Car, Heart, Briefcase, Umbrella, Users, Building2, Banknote,
+  ArrowRight, CheckCircle
 } from 'lucide-react';
 import { motion } from 'framer-motion';
 
@@ -22,7 +24,7 @@ export default function Insurance() {
     {
       icon: Home,
       title: 'Property Insurance',
-      description: 'Buildings, contents, and landlord insurance for residential and commercial properties.',
+      description: 'Buildings, contents, and landlord cover for residential and commercial properties.',
     },
     {
       icon: Car,
@@ -32,7 +34,12 @@ export default function Insurance() {
     {
       icon: Heart,
       title: 'Life & Disability',
-      description: 'Life cover, disability, and income protection for you and your family.',
+      description: 'Life cover, disability, and income protection for individuals and families.',
+    },
+    {
+      icon: Users,
+      title: 'Medical Aid & Gap Cover',
+      description: 'Medical aid schemes and gap cover options for comprehensive healthcare.',
     },
     {
       icon: Briefcase,
@@ -40,14 +47,19 @@ export default function Insurance() {
       description: 'Public liability, professional indemnity, and business interruption cover.',
     },
     {
-      icon: Users,
-      title: 'Medical Aid',
-      description: 'Medical aid schemes and gap cover options for individuals and families.',
+      icon: Building2,
+      title: 'Commercial Property',
+      description: 'Specialised cover for commercial buildings and business premises.',
     },
     {
       icon: Umbrella,
-      title: 'Short-term Insurance',
-      description: 'General short-term insurance for assets and personal belongings.',
+      title: 'Personal Liability',
+      description: 'Liability cover for personal risks and unexpected claims.',
+    },
+    {
+      icon: Banknote,
+      title: 'Credit & Payment Protection',
+      description: 'Protection for loan repayments in case of unforeseen circumstances.',
     },
   ];
 
@@ -71,13 +83,36 @@ export default function Insurance() {
               <Shield className="w-8 h-8 text-[#0d9488]" />
             </div>
             <h1 className="text-4xl lg:text-5xl font-bold text-white mb-4">
-              Protect Your Wealth
+              Insurance & Risk Protection
             </h1>
             <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-              Insurance is an essential part of financial planning. We help you review your 
-              coverage and connect with suitable insurance providers.
+              Protecting your wealth and reducing risk is as important as building it. 
+              We help review your coverage and connect you with suitable insurance providers.
             </p>
           </motion.div>
+        </div>
+      </section>
+
+      {/* Overview */}
+      <section className="py-12 lg:py-16 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-bold text-[#1e3a5f] mb-4 text-center">
+            Why Insurance Matters
+          </h2>
+          <div className="prose prose-slate max-w-none text-slate-600 leading-relaxed">
+            <p className="mb-4">
+              Insurance is a fundamental part of financial planning. It protects what you've worked to build 
+              and reduces the impact of unexpected events on your financial position.
+            </p>
+            <p className="mb-4">
+              Whether it's safeguarding your property, protecting your income, or ensuring your family's 
+              security, the right insurance cover provides peace of mind and financial resilience.
+            </p>
+            <p>
+              We don't sell insurance directly. Instead, we help you understand your needs, review your 
+              current coverage, and connect you with suitable insurance providers who can offer appropriate solutions.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -85,13 +120,13 @@ export default function Insurance() {
       <section className="py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-[#1e3a5f] mb-4">Insurance Categories</h2>
+            <h2 className="text-3xl font-bold text-[#1e3a5f] mb-4">Insurance Categories We Review</h2>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              We can help review your needs across various insurance types.
+              We can help assess your needs across various insurance types and connect you with providers.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {categories.map((category, index) => (
               <motion.div
                 key={category.title}
@@ -99,12 +134,12 @@ export default function Insurance() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: index * 0.1 }}
-                className="bg-white rounded-2xl p-6 shadow-sm border border-slate-100 hover:shadow-lg transition-all duration-300"
+                className="bg-white rounded-2xl p-6 shadow-sm border border-slate-100 hover:shadow-md hover:border-[#0d9488]/30 transition-all duration-300"
               >
                 <div className="w-12 h-12 bg-[#0d9488]/10 rounded-xl flex items-center justify-center mb-4">
                   <category.icon className="w-6 h-6 text-[#0d9488]" />
                 </div>
-                <h3 className="text-lg font-semibold text-[#1e3a5f] mb-2">
+                <h3 className="text-base font-semibold text-[#1e3a5f] mb-2">
                   {category.title}
                 </h3>
                 <p className="text-slate-600 text-sm leading-relaxed">
@@ -126,8 +161,8 @@ export default function Insurance() {
                 Request an Insurance Review
               </h2>
               <p className="text-lg text-slate-600 mb-6 leading-relaxed">
-                Not sure if you have the right coverage? Request a review and we'll help 
-                you understand your options and connect you with suitable providers.
+                Not sure if you have adequate coverage? Request a no-obligation review. 
+                We'll assess your needs and connect you with suitable insurance providers.
               </p>
 
               <div className="space-y-4 mb-8">
@@ -155,10 +190,11 @@ export default function Insurance() {
               </div>
 
               <div className="p-4 bg-slate-50 rounded-xl">
-                <p className="text-xs text-slate-500">
-                  <strong>Disclaimer:</strong> Insurance advice and quotes are subject to 
-                  assessment and provider terms. We facilitate introductions to suitable 
-                  insurance providers and do not guarantee specific outcomes or premiums.
+                <p className="text-xs text-slate-500 leading-relaxed">
+                  <strong>Important:</strong> All insurance recommendations are subject to provider 
+                  assessment and terms. Premiums and cover depend on individual circumstances, risk profile, 
+                  and underwriting criteria. We facilitate connections to suitable providers but do not 
+                  guarantee specific outcomes, coverage, or premium amounts.
                 </p>
               </div>
             </div>
@@ -175,11 +211,37 @@ export default function Insurance() {
                     <CheckCircle className="w-8 h-8 text-[#0d9488]" />
                   </div>
                   <h3 className="text-xl font-semibold text-[#1e3a5f] mb-2">
-                    Request Received
+                    Review Request Received
                   </h3>
-                  <p className="text-slate-600">
-                    Thank you for your request. We'll be in touch shortly to discuss your insurance needs.
+                  <p className="text-slate-600 mb-6">
+                    Thank you for your request. We'll contact you within 1-2 business days to discuss 
+                    your insurance needs and connect you with suitable providers.
                   </p>
+                  <div className="p-4 bg-slate-50 rounded-xl mb-4">
+                    <h4 className="font-medium text-[#1e3a5f] mb-2 text-sm">What happens next:</h4>
+                    <ol className="text-left text-sm text-slate-600 space-y-1.5">
+                      <li className="flex items-start gap-2">
+                        <span className="font-medium text-[#0d9488]">1.</span>
+                        We'll review your request and assess which insurance types are most relevant
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="font-medium text-[#0d9488]">2.</span>
+                        A consultant will contact you to understand your needs in detail
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="font-medium text-[#0d9488]">3.</span>
+                        We'll connect you with suitable providers who can offer quotes and cover options
+                      </li>
+                    </ol>
+                  </div>
+                  <div className="flex gap-3 justify-center">
+                    <Button asChild variant="outline" onClick={() => setSubmitted(false)}>
+                      <Link to={createPageUrl('Home')}>Return Home</Link>
+                    </Button>
+                    <Button asChild className="bg-[#0d9488] hover:bg-[#0f766e]">
+                      <Link to={createPageUrl('Contact')}>Contact Us</Link>
+                    </Button>
+                  </div>
                 </motion.div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-5">
@@ -234,10 +296,12 @@ export default function Insurance() {
                       <option value="property">Property Insurance</option>
                       <option value="vehicle">Vehicle Insurance</option>
                       <option value="life">Life & Disability</option>
+                      <option value="medical">Medical Aid & Gap Cover</option>
                       <option value="business">Business Insurance</option>
-                      <option value="medical">Medical Aid</option>
-                      <option value="short-term">Short-term Insurance</option>
-                      <option value="comprehensive">Comprehensive Review</option>
+                      <option value="commercial">Commercial Property</option>
+                      <option value="liability">Personal Liability</option>
+                      <option value="credit">Credit & Payment Protection</option>
+                      <option value="comprehensive">Comprehensive Review (All Types)</option>
                     </select>
                   </div>
 
