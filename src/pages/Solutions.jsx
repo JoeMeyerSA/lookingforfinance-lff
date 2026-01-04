@@ -77,11 +77,10 @@ export default function Solutions() {
             <h1 className="text-4xl lg:text-5xl font-bold text-white mb-4">
               Finance Solutions
             </h1>
-            <p className="text-xl text-slate-300 max-w-2xl mx-auto mb-8">
+            <p className="text-xl text-slate-300 max-w-2xl mx-auto">
               Explore our range of finance pathways. We help you find the right route 
               and guide you through the process.
             </p>
-            <p className="text-xl text-slate-300 max-w-2xl mx-auto"></p>
           </div>
         </div>
       </section>
