@@ -39,7 +39,7 @@ export default function TrustLayer({ variant = 'default' }) {
           </div>
           <div>
             <p className="font-medium text-[#1e3a5f] text-sm">Matched to suitable options</p>
-            <p className="text-xs text-slate-600">Commercial banks + specialist lenders and investors.</p>
+            <p className="text-xs text-slate-600">Commercial banks + credit providers and investors.</p>
           </div>
         </div>
         <div className="flex flex-col items-center text-center gap-2">
@@ -93,7 +93,7 @@ export default function TrustLayer({ variant = 'default' }) {
         <div className="grid grid-cols-3 sm:grid-cols-6 gap-2 mb-3">
           {[
             { label: 'Commercial banks', icon: Building2, color: 'text-blue-600' },
-            { label: 'Registered credit providers', icon: FileCheck, color: 'text-green-600' },
+            { label: 'Credit providers', icon: FileCheck, color: 'text-green-600' },
             { label: 'Specialist lenders', icon: Target, color: 'text-purple-600' },
             { label: 'Private investors', icon: Users2, color: 'text-indigo-600' },
             { label: 'Asset finance houses', icon: TrendingUp, color: 'text-rose-600' },
@@ -109,7 +109,7 @@ export default function TrustLayer({ variant = 'default' }) {
           ))}
         </div>
         <p className="text-xs text-slate-500 leading-relaxed text-center">
-          We work with commercial banks plus a network of registered credit providers and investors. Options depend on fit and assessment.
+          We work with commercial banks plus a network of credit providers and investors. Options depend on fit and assessment.
         </p>
       </div>
     </div>
