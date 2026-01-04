@@ -1,5 +1,5 @@
 import React from 'react';
-import { Shield, CheckCircle, Users, Calculator, BadgeCheck } from 'lucide-react';
+import { Shield, CheckCircle, Users, Calculator, BadgeCheck, Building2, FileCheck, Target, Users2, TrendingUp, Sun } from 'lucide-react';
 
 export default function TrustLayer({ variant = 'default' }) {
   const isCompact = variant === 'compact';
@@ -74,12 +74,20 @@ export default function TrustLayer({ variant = 'default' }) {
       <div className={`${isCompact ? 'pt-4' : 'pt-6'} border-t border-slate-200`}>
         <p className="text-xs font-medium text-slate-700 mb-3 text-center">Working with multiple funders:</p>
         <div className="grid grid-cols-3 sm:grid-cols-6 gap-2 mb-3">
-          {['Commercial banks', 'Registered credit providers', 'Specialist lenders', 'Private investors', 'Asset finance houses', 'Solar & equipment finance'].map((label, i) => (
+          {[
+            { label: 'Commercial banks', icon: Building2, color: 'text-blue-600' },
+            { label: 'Registered credit providers', icon: FileCheck, color: 'text-green-600' },
+            { label: 'Specialist lenders', icon: Target, color: 'text-purple-600' },
+            { label: 'Private investors', icon: Users2, color: 'text-indigo-600' },
+            { label: 'Asset finance houses', icon: TrendingUp, color: 'text-rose-600' },
+            { label: 'Solar & equipment finance', icon: Sun, color: 'text-amber-600' }
+          ].map((item, i) => (
             <div
               key={i}
-              className="h-12 bg-slate-100 rounded-lg flex items-center justify-center border border-slate-200 px-2"
+              className="h-16 bg-slate-50 rounded-lg flex flex-col items-center justify-center border border-slate-200 px-2 py-2 hover:border-slate-300 transition-colors"
             >
-              <span className="text-xs text-slate-400 text-center leading-tight">{label}</span>
+              <item.icon className={`w-5 h-5 ${item.color} mb-1`} />
+              <span className="text-xs text-slate-500 text-center leading-tight font-medium">{item.label}</span>
             </div>
           ))}
         </div>
