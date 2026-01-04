@@ -16,6 +16,8 @@ export default function Calculators() {
   const initialTab = urlParams.get('tab') || 'mortgage';
   
   const [activeTab, setActiveTab] = useState(initialTab);
+  const [guidanceState, setGuidanceState] = useState('default');
+  const [hasResults, setHasResults] = useState(false);
 
   const tabs = [
     { id: 'mortgage', label: 'Mortgage', icon: Home, color: 'bg-blue-500' },
@@ -25,17 +27,22 @@ export default function Calculators() {
   ];
 
   const renderCalculator = () => {
+    const sharedProps = {
+      onGuidanceChange: setGuidanceState,
+      onResultsChange: setHasResults,
+    };
+    
     switch (activeTab) {
       case 'mortgage':
-        return <MortgageCalculator />;
+        return <MortgageCalculator key="mortgage" {...sharedProps} />;
       case 'solar':
-        return <SolarCalculator />;
+        return <SolarCalculator key="solar" {...sharedProps} />;
       case 'vehicle':
-        return <VehicleCalculator />;
+        return <VehicleCalculator key="vehicle" {...sharedProps} />;
       case 'business':
-        return <BusinessCalculator />;
+        return <BusinessCalculator key="business" {...sharedProps} />;
       default:
-        return <MortgageCalculator />;
+        return <MortgageCalculator key="mortgage" {...sharedProps} />;
     }
   };
 
@@ -92,7 +99,11 @@ export default function Calculators() {
             {/* Guidance Panel - Desktop */}
             <div className="hidden lg:block">
               <div className="bg-white rounded-2xl p-6 shadow-sm sticky top-40">
-                <CalculatorGuidance type={activeTab} />
+                <CalculatorGuidance 
+                  type={activeTab} 
+                  guidanceState={guidanceState}
+                  hasResults={hasResults}
+                />
               </div>
             </div>
 
@@ -106,23 +117,18 @@ export default function Calculators() {
                     <span className="text-slate-400 text-sm">Tap to expand</span>
                   </summary>
                   <div className="px-4 pb-4">
-                    <CalculatorGuidance type={activeTab} />
+                    <CalculatorGuidance 
+                      type={activeTab}
+                      guidanceState={guidanceState}
+                      hasResults={hasResults}
+                    />
                   </div>
                 </details>
               </div>
 
-              <AnimatePresence mode="wait">
-                <motion.div
-                  key={activeTab}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -20 }}
-                  transition={{ duration: 0.3 }}
-                  className="bg-white rounded-2xl p-6 lg:p-8 shadow-sm"
-                >
-                  {renderCalculator()}
-                </motion.div>
-              </AnimatePresence>
+              <div className="bg-white rounded-2xl p-6 lg:p-8 shadow-sm">
+                {renderCalculator()}
+              </div>
 
               {/* CTA */}
               <div className="mt-6 bg-gradient-to-br from-[#1e3a5f] to-[#0f4c5c] rounded-2xl p-6 text-center">
