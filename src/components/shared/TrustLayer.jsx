@@ -22,7 +22,7 @@ export default function TrustLayer({ variant = 'default' }) {
               <div>
                 <p className="font-medium text-[#1e3a5f] text-sm mb-2">We listen, then structure</p>
                 <div className="w-12 h-px bg-slate-200 mx-auto mb-2"></div>
-                <p className="text-xs text-slate-600">When anyone is looking for finance, the surest way to waste time and miss the right options is an unstructured, scattergun approach. When last did you sit down with an expert who took time to understand your story — your need, exposure and risk — and structure the most sensible route using an individualised banking-style approach? We only move to paperwork once the route is clear and worth pursuing.</p>
+                <p className="text-xs text-slate-600">When you're looking for finance, a scattergun approach wastes time and misses options. We start by understanding your story — your need, exposure and risk — then structure the most sensible route. Paperwork only starts once the route is clear and worth pursuing.</p>
               </div>
             </div>
             <div className="flex flex-col items-center text-center gap-2 bg-blue-50/30 border border-slate-200 rounded-xl p-5">
@@ -32,7 +32,7 @@ export default function TrustLayer({ variant = 'default' }) {
               <div>
                 <p className="font-medium text-[#1e3a5f] text-sm mb-2">Matched to the right funders</p>
                 <div className="w-12 h-px bg-slate-200 mx-auto mb-2"></div>
-                <p className="text-xs text-slate-600">Most people default to their bank first when they're looking for finance. Should you? Most people go straight to their bank — but it might not be your best option. If you try to do this yourself, you're about to be challenged by insensitive, algorithmic-based systems designed for standard cases rather than individual circumstances. That's where people waste weeks and miss finance opportunities before the deal is properly considered. We match your route to the funders most suited to your need and risk profile, so your application reaches the right decision-makers first.</p>
+                <p className="text-xs text-slate-600">Most people go straight to their bank — but it may not be the best fit for your deal. Algorithmic, standard-case systems waste weeks before the substance is properly considered. We match your route to the funder most likely to consider your application first.</p>
               </div>
             </div>
             <div className="flex flex-col items-center text-center gap-2 bg-white border border-slate-200 rounded-xl p-5">
@@ -42,7 +42,7 @@ export default function TrustLayer({ variant = 'default' }) {
               <div>
                 <p className="font-medium text-[#1e3a5f] text-sm mb-2">Funder-ready packaging</p>
                 <div className="w-12 h-px bg-slate-200 mx-auto mb-2"></div>
-                <p className="text-xs text-slate-600">If you think an application clerk handling hundreds of applications a day has time to interpret a messy submission, it's a costly assumption. It either gets declined or triggers an exhausting loop of back-and-forth questions. To prevent that, we structure and package your submission in a funder-ready format that makes the deal easy to assess — using only the documents that matter for your route.</p>
+                <p className="text-xs text-slate-600">Messy submissions get declined or trigger endless back-and-forth questions. We package your deal in a funder-ready format that's easy to assess — using only the documents that matter for your route. Less friction. Faster clarity.</p>
               </div>
             </div>
             <div className="flex flex-col items-center text-center gap-2 bg-blue-50/30 border border-slate-200 rounded-xl p-5">
@@ -52,7 +52,7 @@ export default function TrustLayer({ variant = 'default' }) {
               <div>
                 <p className="font-medium text-[#1e3a5f] text-sm mb-2">Driven follow-through</p>
                 <div className="w-12 h-px bg-slate-200 mx-auto mb-2"></div>
-                <p className="text-xs text-slate-600">A good submission can still stall if nobody drives the next step. Through our working relationships with financial institutions, we manage follow-ups and funder queries so your application stays active and visible with the right decision-makers. If any aspect is queried, we respond within 1 business day and keep the process moving — including any amendments or resubmission required.</p>
+                <p className="text-xs text-slate-600">Even good submissions can stall if nobody drives the next step. We manage follow-ups and funder queries so your application stays active and visible. If any aspect is queried, we respond within 1 business day and keep the process moving.</p>
               </div>
             </div>
           </div>
