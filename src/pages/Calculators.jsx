@@ -6,21 +6,23 @@ import { Home, Sun, Car, Briefcase, Calculator, ArrowRight } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion';
 
 import CalculatorGuidance from '@/components/calculators/CalculatorGuidance';
-import MortgageCalculator from '@/components/calculators/MortgageCalculator';
+import BondAffordabilityCalculator from '@/components/calculators/BondAffordabilityCalculator';
+import BondRepaymentCalculator from '@/components/calculators/BondRepaymentCalculator';
 import SolarCalculator from '@/components/calculators/SolarCalculator';
 import VehicleCalculator from '@/components/calculators/VehicleCalculator';
 import BusinessCalculator from '@/components/calculators/BusinessCalculator';
 
 export default function Calculators() {
   const urlParams = new URLSearchParams(window.location.search);
-  const initialTab = urlParams.get('tab') || 'mortgage';
+  const initialTab = urlParams.get('tab') || 'affordability';
   
   const [activeTab, setActiveTab] = useState(initialTab);
   const [guidanceState, setGuidanceState] = useState('default');
   const [hasResults, setHasResults] = useState(false);
 
   const tabs = [
-    { id: 'mortgage', label: 'Residential Property', icon: Home, color: 'bg-blue-500' },
+    { id: 'affordability', label: 'Bond Affordability', icon: Home, color: 'bg-rose-500' },
+    { id: 'repayment', label: 'Bond Repayment', icon: Home, color: 'bg-blue-600' },
     { id: 'solar', label: 'Solar', icon: Sun, color: 'bg-amber-500' },
     { id: 'vehicle', label: 'Vehicle', icon: Car, color: 'bg-purple-500' },
     { id: 'business', label: 'Business', icon: Briefcase, color: 'bg-green-500' },
@@ -33,8 +35,10 @@ export default function Calculators() {
     };
     
     switch (activeTab) {
-      case 'mortgage':
-        return <MortgageCalculator key="mortgage" {...sharedProps} />;
+      case 'affordability':
+        return <BondAffordabilityCalculator key="affordability" {...sharedProps} />;
+      case 'repayment':
+        return <BondRepaymentCalculator key="repayment" {...sharedProps} />;
       case 'solar':
         return <SolarCalculator key="solar" {...sharedProps} />;
       case 'vehicle':
@@ -42,7 +46,7 @@ export default function Calculators() {
       case 'business':
         return <BusinessCalculator key="business" {...sharedProps} />;
       default:
-        return <MortgageCalculator key="mortgage" {...sharedProps} />;
+        return <BondAffordabilityCalculator key="affordability" {...sharedProps} />;
     }
   };
 
