@@ -15,7 +15,7 @@ export default function TrustLayer({ variant = 'default' }) {
           <p className="text-xs font-bold text-slate-600 mb-6">With 40+ years of combined banking experience, our finance specialists structure your application properly and guide you individually through the process.</p>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 mb-6">
-            <div className="flex flex-col items-center text-center gap-2">
+            <div className="flex flex-col items-center text-center gap-2 bg-white border border-slate-200 rounded-xl p-5">
               <div className="w-10 h-10 bg-[#0d9488]/10 rounded-lg flex items-center justify-center flex-shrink-0">
                 <ClipboardCheck className="w-5 h-5 text-[#0d9488]" />
               </div>
@@ -24,7 +24,7 @@ export default function TrustLayer({ variant = 'default' }) {
                 <p className="text-xs text-slate-600">When anyone is looking for finance, the surest way to waste time and miss the right options is an unstructured, scattergun approach. When last did you sit down with an expert who took time to understand your story — your need, exposure and risk — and structure the most sensible route using an individualised banking-style approach? We only move to paperwork once the route is clear and worth pursuing.</p>
               </div>
             </div>
-            <div className="flex flex-col items-center text-center gap-2">
+            <div className="flex flex-col items-center text-center gap-2 bg-blue-50/30 border border-slate-200 rounded-xl p-5">
               <div className="w-10 h-10 bg-[#0d9488]/10 rounded-lg flex items-center justify-center flex-shrink-0">
                 <Network className="w-5 h-5 text-[#0d9488]" />
               </div>
@@ -33,7 +33,7 @@ export default function TrustLayer({ variant = 'default' }) {
                 <p className="text-xs text-slate-600">Most people default to their bank first when they're looking for finance. Should you? Most people go straight to their bank — but it might not be your best option. If you try to do this yourself, you're about to be challenged by insensitive, algorithmic-based systems designed for standard cases rather than individual circumstances. That's where people waste weeks and miss finance opportunities before the deal is properly considered. We match your route to the funders most suited to your need and risk profile, so your application reaches the right decision-makers first.</p>
               </div>
             </div>
-            <div className="flex flex-col items-center text-center gap-2">
+            <div className="flex flex-col items-center text-center gap-2 bg-white border border-slate-200 rounded-xl p-5">
               <div className="w-10 h-10 bg-[#0d9488]/10 rounded-lg flex items-center justify-center flex-shrink-0">
                 <FileText className="w-5 h-5 text-[#0d9488]" />
               </div>
@@ -42,7 +42,7 @@ export default function TrustLayer({ variant = 'default' }) {
                 <p className="text-xs text-slate-600">If you think an application clerk handling hundreds of applications a day has time to interpret a messy submission, it's a costly assumption. It either gets declined or triggers an exhausting loop of back-and-forth questions. To prevent that, we structure and package your submission in a funder-ready format that makes the deal easy to assess — using only the documents that matter for your route.</p>
               </div>
             </div>
-            <div className="flex flex-col items-center text-center gap-2">
+            <div className="flex flex-col items-center text-center gap-2 bg-blue-50/30 border border-slate-200 rounded-xl p-5">
               <div className="w-10 h-10 bg-[#0d9488]/10 rounded-lg flex items-center justify-center flex-shrink-0">
                 <Bell className="w-5 h-5 text-[#0d9488]" />
               </div>
