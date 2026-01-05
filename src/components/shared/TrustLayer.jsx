@@ -57,10 +57,7 @@ export default function TrustLayer({ variant = 'default' }) {
             </div>
           </div>
 
-          <div className="text-xs text-slate-500 leading-relaxed space-y-1">
-            <p>If any aspect is queried, we respond within 1 business day and keep the process moving — including any amendments or resubmission required.</p>
-            <p>We work with commercial banks and our network of registered financial credit providers or investors. Options depend on fit and assessment.</p>
-          </div>
+
         </div>
       }
 
