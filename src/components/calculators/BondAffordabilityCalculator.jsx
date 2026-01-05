@@ -15,7 +15,7 @@ export default function BondAffordabilityCalculator({ onGuidanceChange, onResult
       totalMonthlyExpenses: 60000,
       deposit: 0,
       yearsToRepay: 20,
-      interestRate: 11.75,
+      interestRate: 11.75
     };
   });
 
@@ -49,7 +49,7 @@ export default function BondAffordabilityCalculator({ onGuidanceChange, onResult
     if (maxAffordableMonthlyRepayment <= 0) {
       setResults({
         amountQualifyFor: values.deposit,
-        monthlyRepaymentAmount: 0,
+        monthlyRepaymentAmount: 0
       });
       onResultsChange?.(true);
       return;
@@ -64,7 +64,7 @@ export default function BondAffordabilityCalculator({ onGuidanceChange, onResult
     } else {
       loanPrincipal = maxAffordableMonthlyRepayment * (Math.pow(1 + monthlyRate, numberOfPayments) - 1) / (monthlyRate * Math.pow(1 + monthlyRate, numberOfPayments));
     }
-    
+
     const amountQualifyFor = loanPrincipal + values.deposit;
     const totalPayment = maxAffordableMonthlyRepayment * numberOfPayments;
     const totalInterest = totalPayment - loanPrincipal;
@@ -74,22 +74,22 @@ export default function BondAffordabilityCalculator({ onGuidanceChange, onResult
       monthlyRepaymentAmount: maxAffordableMonthlyRepayment,
       loanAmount: loanPrincipal,
       totalPayment,
-      totalInterest,
+      totalInterest
     });
     onResultsChange?.(true);
-    };
+  };
 
-    useEffect(() => {
+  useEffect(() => {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(values));
     calculate();
-    }, [values]);
+  }, [values]);
 
   const formatCurrency = (amount) => {
     return new Intl.NumberFormat('en-ZA', {
       style: 'currency',
       currency: 'ZAR',
       minimumFractionDigits: 0,
-      maximumFractionDigits: 0,
+      maximumFractionDigits: 0
     }).format(amount);
   };
 
@@ -116,12 +116,12 @@ export default function BondAffordabilityCalculator({ onGuidanceChange, onResult
                 type="number"
                 value={values.grossMonthlyIncome}
                 onChange={(e) => setValues({ ...values, grossMonthlyIncome: Number(e.target.value) })}
-                className={`pl-8 bg-slate-50 border-slate-200 ${errors.grossMonthlyIncome ? 'border-red-500' : ''}`}
-              />
+                className={`pl-8 bg-slate-50 border-slate-200 ${errors.grossMonthlyIncome ? 'border-red-500' : ''}`} />
+
             </div>
-            {errors.grossMonthlyIncome && (
-              <p className="text-xs text-red-600 mt-1">{errors.grossMonthlyIncome}</p>
-            )}
+            {errors.grossMonthlyIncome &&
+            <p className="text-xs text-red-600 mt-1">{errors.grossMonthlyIncome}</p>
+            }
           </div>
 
           <div>
@@ -135,12 +135,12 @@ export default function BondAffordabilityCalculator({ onGuidanceChange, onResult
                 type="number"
                 value={values.netMonthlyIncome}
                 onChange={(e) => setValues({ ...values, netMonthlyIncome: Number(e.target.value) })}
-                className={`pl-8 bg-slate-50 border-slate-200 ${errors.netMonthlyIncome ? 'border-red-500' : ''}`}
-              />
+                className={`pl-8 bg-slate-50 border-slate-200 ${errors.netMonthlyIncome ? 'border-red-500' : ''}`} />
+
             </div>
-            {errors.netMonthlyIncome && (
-              <p className="text-xs text-red-600 mt-1">{errors.netMonthlyIncome}</p>
-            )}
+            {errors.netMonthlyIncome &&
+            <p className="text-xs text-red-600 mt-1">{errors.netMonthlyIncome}</p>
+            }
           </div>
 
           <div>
@@ -154,12 +154,12 @@ export default function BondAffordabilityCalculator({ onGuidanceChange, onResult
                 type="number"
                 value={values.totalMonthlyExpenses}
                 onChange={(e) => setValues({ ...values, totalMonthlyExpenses: Number(e.target.value) })}
-                className={`pl-8 bg-slate-50 border-slate-200 ${errors.totalMonthlyExpenses ? 'border-red-500' : ''}`}
-              />
+                className={`pl-8 bg-slate-50 border-slate-200 ${errors.totalMonthlyExpenses ? 'border-red-500' : ''}`} />
+
             </div>
-            {errors.totalMonthlyExpenses && (
-              <p className="text-xs text-red-600 mt-1">{errors.totalMonthlyExpenses}</p>
-            )}
+            {errors.totalMonthlyExpenses &&
+            <p className="text-xs text-red-600 mt-1">{errors.totalMonthlyExpenses}</p>
+            }
           </div>
 
           <div>
@@ -172,8 +172,8 @@ export default function BondAffordabilityCalculator({ onGuidanceChange, onResult
                 type="text"
                 value={netSurplusIncome.toLocaleString()}
                 readOnly
-                className="pl-8 bg-slate-100 text-slate-600 border-slate-200"
-              />
+                className="pl-8 bg-slate-100 text-slate-600 border-slate-200" />
+
             </div>
           </div>
 
@@ -188,12 +188,12 @@ export default function BondAffordabilityCalculator({ onGuidanceChange, onResult
                 type="number"
                 value={values.deposit}
                 onChange={(e) => setValues({ ...values, deposit: Number(e.target.value) })}
-                className={`pl-8 bg-slate-50 border-slate-200 ${errors.deposit ? 'border-red-500' : ''}`}
-              />
+                className={`pl-8 bg-slate-50 border-slate-200 ${errors.deposit ? 'border-red-500' : ''}`} />
+
             </div>
-            {errors.deposit && (
-              <p className="text-xs text-red-600 mt-1">{errors.deposit}</p>
-            )}
+            {errors.deposit &&
+            <p className="text-xs text-red-600 mt-1">{errors.deposit}</p>
+            }
           </div>
 
           <div className="grid grid-cols-2 gap-4">
@@ -206,11 +206,11 @@ export default function BondAffordabilityCalculator({ onGuidanceChange, onResult
                 type="number"
                 value={values.yearsToRepay}
                 onChange={(e) => setValues({ ...values, yearsToRepay: Number(e.target.value) })}
-                className={`bg-slate-50 border-slate-200 ${errors.yearsToRepay ? 'border-red-500' : ''}`}
-              />
-              {errors.yearsToRepay && (
-                <p className="text-xs text-red-600 mt-1">{errors.yearsToRepay}</p>
-              )}
+                className={`bg-slate-50 border-slate-200 ${errors.yearsToRepay ? 'border-red-500' : ''}`} />
+
+              {errors.yearsToRepay &&
+              <p className="text-xs text-red-600 mt-1">{errors.yearsToRepay}</p>
+              }
             </div>
             <div>
               <Label htmlFor="interestRate" className="text-sm text-slate-700 mb-1.5 block">
@@ -222,11 +222,11 @@ export default function BondAffordabilityCalculator({ onGuidanceChange, onResult
                 step="0.01"
                 value={values.interestRate}
                 onChange={(e) => setValues({ ...values, interestRate: Number(e.target.value) })}
-                className={`bg-slate-50 border-slate-200 ${errors.interestRate ? 'border-red-500' : ''}`}
-              />
-              {errors.interestRate && (
-                <p className="text-xs text-red-600 mt-1">{errors.interestRate}</p>
-              )}
+                className={`bg-slate-50 border-slate-200 ${errors.interestRate ? 'border-red-500' : ''}`} />
+
+              {errors.interestRate &&
+              <p className="text-xs text-red-600 mt-1">{errors.interestRate}</p>
+              }
             </div>
           </div>
 
@@ -236,8 +236,8 @@ export default function BondAffordabilityCalculator({ onGuidanceChange, onResult
         </div>
 
         {/* Results Column */}
-        {results && (
-          <div className="bg-gradient-to-br from-rose-500 to-rose-600 rounded-3xl p-8 text-white shadow-xl">
+        {results &&
+        <div className="bg-gradient-to-br from-rose-500 to-rose-600 rounded-3xl p-8 text-white shadow-xl">
             <div className="mb-8">
               <p className="text-rose-100 text-sm mb-2">Amount you qualify for</p>
               <p className="text-5xl font-bold">{formatCurrency(results.amountQualifyFor)}</p>
@@ -273,13 +273,13 @@ export default function BondAffordabilityCalculator({ onGuidanceChange, onResult
 
             <p className="text-xs text-rose-100 mt-6 pt-4 border-t border-white/20">* Results are indicative only and not official quotes.</p>
           </div>
-        )}
+        }
       </div>
 
       {/* Info Note */}
       <div className="pt-6 border-t border-slate-200">
-        <p className="text-sm text-slate-600 leading-relaxed">
-          <strong>Please Note:</strong> The interest rate displayed here is the current, national, prime interest rate, as set by the South African Reserve Bank. The interest rate offered by your bank when applying for a loan may vary.
+        <p className="text-sm text-slate-600 leading-relaxed">Please Note: The interest rate displayed here is just for calculation purposes. The interest rate offered by your bank when applying for a loan may vary.
+
         </p>
       </div>
 
@@ -320,6 +320,6 @@ export default function BondAffordabilityCalculator({ onGuidanceChange, onResult
           </div>
         </div>
       </div>
-    </div>
-  );
+    </div>);
+
 }
