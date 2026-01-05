@@ -218,6 +218,8 @@ export default function BondRepaymentCalculator({ onGuidanceChange, onResultsCha
                 <span className="font-semibold">{formatCurrency(results.totalPayment)}</span>
               </div>
             </div>
+
+            <p className="text-xs text-blue-100 mt-6 pt-4 border-t border-white/20">* Results are indicative only and not official quotes.</p>
           </div>
         )}
       </div>

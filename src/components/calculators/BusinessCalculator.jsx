@@ -202,9 +202,10 @@ export default function BusinessCalculator({ onGuidanceChange, onResultsChange }
             </div>
 
             <div className="mt-6 pt-6 border-t border-white/20">
-              <p className="text-sm text-green-100 leading-relaxed">
+              <p className="text-sm text-green-100 leading-relaxed mb-4">
                 <strong>Important:</strong> The monthly repayment must be affordable from your business cash flow. Funders will assess debt serviceability.
               </p>
+              <p className="text-xs text-green-100">* Results are indicative only and not official quotes.</p>
             </div>
           </div>
         )}

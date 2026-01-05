@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Button } from '@/components/ui/button';
-import { HelpCircle } from 'lucide-react';
+import { Home, TrendingUp, Calendar, HelpCircle } from 'lucide-react';
 
 const STORAGE_KEY = 'bond_affordability_calculator_values';
 
@@ -66,18 +66,23 @@ export default function BondAffordabilityCalculator({ onGuidanceChange, onResult
     }
     
     const amountQualifyFor = loanPrincipal + values.deposit;
+    const totalPayment = maxAffordableMonthlyRepayment * numberOfPayments;
+    const totalInterest = totalPayment - loanPrincipal;
 
     setResults({
       amountQualifyFor,
       monthlyRepaymentAmount: maxAffordableMonthlyRepayment,
+      loanAmount: loanPrincipal,
+      totalPayment,
+      totalInterest,
     });
     onResultsChange?.(true);
-  };
+    };
 
-  useEffect(() => {
+    useEffect(() => {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(values));
     calculate();
-  }, [values]);
+    }, [values]);
 
   const formatCurrency = (amount) => {
     return new Intl.NumberFormat('en-ZA', {
@@ -243,7 +248,30 @@ export default function BondAffordabilityCalculator({ onGuidanceChange, onResult
                 <span className="text-sm text-rose-100">Monthly repayment amount</span>
                 <span className="font-semibold text-xl">{formatCurrency(results.monthlyRepaymentAmount)}</span>
               </div>
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-2">
+                  <Home className="w-4 h-4 text-rose-200" />
+                  <span className="text-sm text-rose-100">Loan Amount</span>
+                </div>
+                <span className="font-semibold">{formatCurrency(results.loanAmount)}</span>
+              </div>
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-2">
+                  <TrendingUp className="w-4 h-4 text-rose-200" />
+                  <span className="text-sm text-rose-100">Total Interest</span>
+                </div>
+                <span className="font-semibold">{formatCurrency(results.totalInterest)}</span>
+              </div>
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-2">
+                  <Calendar className="w-4 h-4 text-rose-200" />
+                  <span className="text-sm text-rose-100">Total Cost</span>
+                </div>
+                <span className="font-semibold">{formatCurrency(results.totalPayment)}</span>
+              </div>
             </div>
+
+            <p className="text-xs text-rose-100 mt-6 pt-4 border-t border-white/20">* Results are indicative only and not official quotes.</p>
           </div>
         )}
       </div>
