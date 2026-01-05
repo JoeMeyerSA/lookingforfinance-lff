@@ -22,7 +22,7 @@ export default function TrustLayer({ variant = 'default' }) {
               <div>
                 <p className="font-medium text-[#1e3a5f] text-sm mb-2">We listen, then structure</p>
                 <div className="w-12 h-px bg-slate-200 mx-auto mb-2"></div>
-                <p className="text-xs text-slate-600">When you're looking for finance, a scattergun approach wastes time and misses options. We start by understanding your story — your need, exposure and risk — then structure the most sensible route. Paperwork only starts once the route is clear and worth pursuing.</p>
+                <p className="text-xs text-slate-600">When you're looking for finance, a <strong>scattergun approach</strong> wastes time and misses options. We start by <strong>understanding your story</strong> — your need, exposure and risk — then structure the <strong>most sensible route</strong>. Paperwork only starts once the <strong>route is clear and worth pursuing</strong>.</p>
               </div>
             </div>
             <div className="flex flex-col items-center text-center gap-2 bg-blue-50/30 border border-slate-200 rounded-xl p-5">
@@ -32,7 +32,7 @@ export default function TrustLayer({ variant = 'default' }) {
               <div>
                 <p className="font-medium text-[#1e3a5f] text-sm mb-2">Matched to the right funders</p>
                 <div className="w-12 h-px bg-slate-200 mx-auto mb-2"></div>
-                <p className="text-xs text-slate-600">Most people go straight to their bank — but it may not be the best fit for your deal. Algorithmic, standard-case systems waste weeks before the substance is properly considered. We match your route to the funder most likely to consider your application first.</p>
+                <p className="text-xs text-slate-600">Most people go straight to their bank — but it <strong>may not be the best fit</strong> for your deal. <strong>Algorithmic, standard-case systems</strong> waste weeks before the substance is properly considered. We <strong>match your route</strong> to the funder <strong>most likely to consider</strong> your application first.</p>
               </div>
             </div>
             <div className="flex flex-col items-center text-center gap-2 bg-white border border-slate-200 rounded-xl p-5">
@@ -42,7 +42,7 @@ export default function TrustLayer({ variant = 'default' }) {
               <div>
                 <p className="font-medium text-[#1e3a5f] text-sm mb-2">Funder-ready packaging</p>
                 <div className="w-12 h-px bg-slate-200 mx-auto mb-2"></div>
-                <p className="text-xs text-slate-600">Messy submissions get declined or trigger endless back-and-forth questions. We package your deal in a funder-ready format that's easy to assess — using only the documents that matter for your route. Less friction. Faster clarity.</p>
+                <p className="text-xs text-slate-600"><strong>Messy submissions</strong> get <strong>declined</strong> or trigger <strong>endless back-and-forth</strong> questions. We package your deal in a <strong>funder-ready format</strong> that's easy to assess — using only the documents that matter for your route. <strong>Less friction. Faster clarity.</strong></p>
               </div>
             </div>
             <div className="flex flex-col items-center text-center gap-2 bg-blue-50/30 border border-slate-200 rounded-xl p-5">
@@ -52,7 +52,7 @@ export default function TrustLayer({ variant = 'default' }) {
               <div>
                 <p className="font-medium text-[#1e3a5f] text-sm mb-2">Driven follow-through</p>
                 <div className="w-12 h-px bg-slate-200 mx-auto mb-2"></div>
-                <p className="text-xs text-slate-600">Even good submissions can stall if nobody drives the next step. We manage follow-ups and funder queries so your application stays active and visible. If any aspect is queried, we respond within 1 business day and keep the process moving.</p>
+                <p className="text-xs text-slate-600">Even good submissions <strong>can still stall</strong> if nobody drives the next step. We <strong>manage follow-ups</strong> and funder queries so your application <strong>stays active and visible</strong>. If any aspect is queried, we respond <strong>within 1 business day</strong> and keep the process moving.</p>
               </div>
             </div>
           </div>
