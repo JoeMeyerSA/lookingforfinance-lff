@@ -95,7 +95,7 @@ export default function SolarCalculator({ onGuidanceChange, onResultsChange }) {
         <div className="space-y-5">
           <div>
             <Label className="text-sm text-slate-700 mb-1.5 block">
-              System Cost (including installation)
+              System Cost (including installation) <span className="text-slate-400">(See FAQs below)</span>
             </Label>
             <p className="text-xs text-slate-500 mb-2">Total cost including panels, inverter, batteries, and professional installation</p>
             <div className="relative">
@@ -250,7 +250,7 @@ export default function SolarCalculator({ onGuidanceChange, onResultsChange }) {
 
       {/* FAQs Section */}
       <div className="pt-8 border-t border-slate-200">
-        <h3 className="text-lg font-semibold text-[#1e3a5f] mb-4">Understanding Your Solar Finance</h3>
+        <h3 className="text-lg font-semibold text-[#1e3a5f] mb-4">Solar & Backup Power Calculator FAQs</h3>
         <div className="grid sm:grid-cols-2 gap-4">
           <div className="bg-slate-50 rounded-xl p-4">
             <div className="flex items-start gap-3 mb-2">

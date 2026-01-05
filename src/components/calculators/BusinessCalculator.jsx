@@ -88,7 +88,7 @@ export default function BusinessCalculator({ onGuidanceChange, onResultsChange }
         <div className="space-y-5">
           <div>
             <Label className="text-sm text-slate-700 mb-1.5 block">
-              Loan Amount Required
+              Loan Amount Required <span className="text-slate-400">(See FAQs below)</span>
             </Label>
             <p className="text-xs text-slate-500 mb-2">How much your business needs to borrow</p>
             <div className="relative">
@@ -213,7 +213,7 @@ export default function BusinessCalculator({ onGuidanceChange, onResultsChange }
 
       {/* FAQs Section */}
       <div className="pt-8 border-t border-slate-200">
-        <h3 className="text-lg font-semibold text-[#1e3a5f] mb-4">Understanding Business Finance</h3>
+        <h3 className="text-lg font-semibold text-[#1e3a5f] mb-4">Business Loan Calculator FAQs</h3>
         <div className="grid sm:grid-cols-2 gap-4">
           <div className="bg-slate-50 rounded-xl p-4">
             <div className="flex items-start gap-3 mb-2">
