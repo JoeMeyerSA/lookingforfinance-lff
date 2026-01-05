@@ -85,34 +85,34 @@ export default function TrustLayer({ variant = 'default' }) {
             </div>
           </div>
         </div>
-      </div>
 
-      {/* Funder Panel */}
-      <div className="pt-6 border-t border-slate-100">
-        <p className="text-sm font-semibold text-[#1e3a5f] mb-4 text-center">Working with multiple funders:</p>
-        <div className="grid grid-cols-3 sm:grid-cols-6 gap-2 mb-4">
-          {[
-          { label: 'Banks', icon: Building2, color: 'text-blue-600' },
-          { label: 'Registered financial credit providers', icon: FileCheck, color: 'text-green-600' },
-          { label: 'Specialist lenders', icon: Target, color: 'text-purple-600' },
-          { label: 'Private investors', icon: Users2, color: 'text-indigo-600' },
-          { label: 'Asset finance houses', icon: TrendingUp, color: 'text-rose-600' },
-          { label: 'Solar & equipment finance', icon: Sun, color: 'text-amber-600' }].
-          map((item, i) =>
-          <div
-            key={i}
-            className="flex flex-col items-center justify-center px-2 py-3">
+        {/* Funder Panel */}
+        <div className="pt-6 border-t border-slate-100">
+          <p className="text-sm font-semibold text-[#1e3a5f] mb-4 text-center">Working with multiple funders:</p>
+          <div className="grid grid-cols-3 sm:grid-cols-6 gap-2 mb-4">
+            {[
+            { label: 'Banks', icon: Building2, color: 'text-blue-600' },
+            { label: 'Registered financial credit providers', icon: FileCheck, color: 'text-green-600' },
+            { label: 'Specialist lenders', icon: Target, color: 'text-purple-600' },
+            { label: 'Private investors', icon: Users2, color: 'text-indigo-600' },
+            { label: 'Asset finance houses', icon: TrendingUp, color: 'text-rose-600' },
+            { label: 'Solar & equipment finance', icon: Sun, color: 'text-amber-600' }].
+            map((item, i) =>
+            <div
+              key={i}
+              className="flex flex-col items-center justify-center px-2 py-3">
 
-              <item.icon className={`w-8 h-8 ${item.color} mb-2`} />
-              <span className="text-xs text-slate-500 text-center leading-tight font-medium">{item.label}</span>
-            </div>
-          )}
+                <item.icon className={`w-8 h-8 ${item.color} mb-2`} />
+                <span className="text-xs text-slate-500 text-center leading-tight font-medium">{item.label}</span>
+              </div>
+            )}
           </div>
           <p className="text-sm text-slate-600 leading-relaxed text-center">
-          We work with banks and a network of registered credit providers and investors, matched to your route and risk profile. Options depend on fit and assessment by the relevant funder.
+            We work with banks and a network of registered credit providers and investors, matched to your route and risk profile. Options depend on fit and assessment by the relevant funder.
           </p>
-          </div>
-          </div>
-    </div>);
+        </div>
+      </div>
+    </div>
+  );
 
 }
