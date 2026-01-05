@@ -9,10 +9,10 @@ export default function TrustLayer({ variant = 'default' }) {
       {/* What to Expect Next - Module */}
       {!isCompact &&
       <div className="pb-6 border-b border-slate-200 text-center bg-slate-50 rounded-xl p-6">
-          <h2 className="text-3xl lg:text-4xl font-bold text-[#1e3a5f] mb-3">
-            Why accept avoidable declines or delays when you're looking for finance?
-          </h2>
-          <p className="text-lg text-slate-600 max-w-2xl mx-auto mb-6">With 40+ years of combined banking experience, our finance specialists structure your application properly and guide you individually through the process.</p>
+          <div className="inline-block px-3 py-1 bg-[#0d9488]/10 mb-2" style={{ borderRadius: '4px' }}>
+            <span className="text-base font-medium text-[#0d9488]">Why accept avoidable declines or delays when you're looking for finance?</span>
+          </div>
+          <p className="text-xs font-bold text-slate-600 mb-6">With 40+ years of combined banking experience, our finance specialists structure your application properly and guide you individually through the process.</p>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 mb-6">
             <div className="flex flex-col items-center text-center gap-2 bg-white border border-slate-200 rounded-xl p-5">
@@ -63,17 +63,17 @@ export default function TrustLayer({ variant = 'default' }) {
 
       {/* Support Partners */}
       <div className={`${isCompact ? 'pt-6 pb-6' : 'pt-8 pb-8'} border-t border-slate-200 bg-slate-50/50 text-center`}>
-        <h2 className="text-3xl lg:text-4xl font-bold text-[#1e3a5f] mb-3">
-          Specialist support when needed:
-        </h2>
-        <p className="text-lg text-slate-600 max-w-2xl mx-auto mb-6">Where specialist input is required, we bring in trusted partners so the application stays compliant and funder-ready.</p>
+        <div className="inline-block px-3 py-1 bg-[#0d9488]/10 mb-1 mx-auto" style={{ borderRadius: '4px' }}>
+          <p className="text-sm font-medium text-[#0d9488] text-center">Specialist support when needed:</p>
+        </div>
+        <p className="text-xs text-slate-600 mb-4 text-center">Where specialist input is required, we bring in trusted partners so the application stays compliant and funder-ready.</p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 mb-6">
           <div className="flex items-center gap-2">
             <div className="w-8 h-8 bg-blue-500/10 rounded-lg flex items-center justify-center flex-shrink-0">
               <Calculator className="w-4 h-4 text-blue-600" />
             </div>
             <div className="text-left">
-              <p className="text-xs font-medium text-[#1e3a5f]">Accounting</p>
+              <p className="text-[#1e3a5f] text-base font-semibold">Accounting</p>
               <p className="text-xs text-slate-500">TaxShop Stellenbosch</p>
             </div>
           </div>
@@ -82,7 +82,7 @@ export default function TrustLayer({ variant = 'default' }) {
               <BadgeCheck className="w-4 h-4 text-[#0d9488]" />
             </div>
             <div className="text-left">
-              <p className="text-xs font-medium text-[#1e3a5f]">Financial advice (when needed)</p>
+              <p className="text-[#1e3a5f] text-base font-semibold">Financial advice (when needed)</p>
               <p className="text-xs text-slate-500">Franschhoek Consulting — Authorised FSP 5815</p>
             </div>
           </div>
@@ -90,9 +90,9 @@ export default function TrustLayer({ variant = 'default' }) {
 
         {/* Funder Panel */}
         <div className="pt-6 border-t border-slate-100 text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold text-[#1e3a5f] mb-3">
-            Working with multiple funders:
-          </h2>
+          <div className="inline-block px-3 py-1 bg-[#0d9488]/10 mb-4 mx-auto" style={{ borderRadius: '4px' }}>
+            <p className="text-sm font-medium text-[#0d9488] text-center">Working with multiple funders:</p>
+          </div>
           <div className="grid grid-cols-3 sm:grid-cols-6 gap-2 mb-4">
             {[
             { label: 'Banks', icon: Building2, color: 'text-blue-600' },
@@ -116,7 +116,7 @@ export default function TrustLayer({ variant = 'default' }) {
           </p>
         </div>
       </div>
-    </div>
-  );
+    </div>);
+
 
 }
