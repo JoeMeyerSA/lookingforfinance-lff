@@ -62,9 +62,10 @@ export default function TrustLayer({ variant = 'default' }) {
       }
 
       {/* Support Partners */}
-      <div className={`${isCompact ? 'pt-3 pb-3' : 'pt-4 pb-4'} border-t border-slate-200`}>
-        <p className="text-xs font-medium text-slate-700 mb-3 text-center">Specialist support when needed:</p>
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8">
+      <div className={`${isCompact ? 'pt-6 pb-6' : 'pt-8 pb-8'} border-t border-slate-200 bg-slate-50/50`}>
+        <p className="text-sm font-semibold text-[#1e3a5f] mb-1 text-center">Specialist support when needed:</p>
+        <p className="text-xs text-slate-600 mb-4 text-center">Where specialist input is required, we bring in trusted partners so the application stays compliant and funder-ready.</p>
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 mb-6">
           <div className="flex items-center gap-2">
             <div className="w-8 h-8 bg-blue-500/10 rounded-lg flex items-center justify-center flex-shrink-0">
               <Calculator className="w-4 h-4 text-blue-600" />
@@ -87,11 +88,11 @@ export default function TrustLayer({ variant = 'default' }) {
       </div>
 
       {/* Funder Panel */}
-      <div className={`${isCompact ? 'pt-4' : 'pt-6'} border-t border-slate-200`}>
-        <p className="text-xs font-medium text-slate-700 mb-3 text-center">Working with multiple funders:</p>
-        <div className="grid grid-cols-3 sm:grid-cols-6 gap-2 mb-3">
+      <div className="pt-6 border-t border-slate-100">
+        <p className="text-sm font-semibold text-[#1e3a5f] mb-4 text-center">Working with multiple funders:</p>
+        <div className="grid grid-cols-3 sm:grid-cols-6 gap-2 mb-4">
           {[
-          { label: 'Commercial banks', icon: Building2, color: 'text-blue-600' },
+          { label: 'Banks', icon: Building2, color: 'text-blue-600' },
           { label: 'Registered financial credit providers', icon: FileCheck, color: 'text-green-600' },
           { label: 'Specialist lenders', icon: Target, color: 'text-purple-600' },
           { label: 'Private investors', icon: Users2, color: 'text-indigo-600' },
@@ -106,11 +107,12 @@ export default function TrustLayer({ variant = 'default' }) {
               <span className="text-xs text-slate-500 text-center leading-tight font-medium">{item.label}</span>
             </div>
           )}
-        </div>
-        <p className="text-xs text-slate-500 leading-relaxed text-center">
-          We work with commercial banks and our network of registered financial credit providers or investors. Options depend on fit and assessment.
-        </p>
-      </div>
+          </div>
+          <p className="text-sm text-slate-600 leading-relaxed text-center">
+          We work with banks and a network of registered credit providers and investors, matched to your route and risk profile. Options depend on fit and assessment by the relevant funder.
+          </p>
+          </div>
+          </div>
     </div>);
 
 }
