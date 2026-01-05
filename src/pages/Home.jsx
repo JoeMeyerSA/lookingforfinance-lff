@@ -1,6 +1,5 @@
 import React from 'react';
 import HeroSection from '@/components/home/HeroSection';
-import TrustStrip from '@/components/home/TrustStrip';
 import TrustLayer from '@/components/shared/TrustLayer';
 import PathCards from '@/components/home/PathCards';
 import HowItWorks from '@/components/home/HowItWorks';
@@ -17,7 +16,6 @@ export default function Home() {
           <TrustLayer />
         </div>
       </section>
-      <TrustStrip />
       <PathCards />
       <HowItWorks />
       <Testimonials />
