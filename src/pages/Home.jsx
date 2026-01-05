@@ -2,7 +2,6 @@ import React from 'react';
 import HeroSection from '@/components/home/HeroSection';
 import TrustLayer from '@/components/shared/TrustLayer';
 import PathCards from '@/components/home/PathCards';
-import HowItWorks from '@/components/home/HowItWorks';
 import Testimonials from '@/components/home/Testimonials';
 import CalculatorTeaser from '@/components/home/CalculatorTeaser';
 import EducationTeaser from '@/components/home/EducationTeaser';
@@ -17,7 +16,6 @@ export default function Home() {
         </div>
       </section>
       <PathCards />
-      <HowItWorks />
       <Testimonials />
       <CalculatorTeaser />
       <EducationTeaser />
