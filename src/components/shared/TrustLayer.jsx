@@ -62,8 +62,10 @@ export default function TrustLayer({ variant = 'default' }) {
       }
 
       {/* Support Partners */}
-      <div className={`${isCompact ? 'pt-6 pb-6' : 'pt-8 pb-8'} border-t border-slate-200 bg-slate-50/50`}>
-        <p className="text-sm font-semibold text-[#1e3a5f] mb-1 text-center">Specialist support when needed:</p>
+      <div className={`${isCompact ? 'pt-6 pb-6' : 'pt-8 pb-8'} border-t border-slate-200 bg-slate-50/50 text-center`}>
+        <div className="inline-block px-3 py-1 bg-[#0d9488]/10 mb-1 mx-auto" style={{ borderRadius: '4px' }}>
+          <p className="text-sm font-medium text-[#0d9488] text-center">Specialist support when needed:</p>
+        </div>
         <p className="text-xs text-slate-600 mb-4 text-center">Where specialist input is required, we bring in trusted partners so the application stays compliant and funder-ready.</p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 mb-6">
           <div className="flex items-center gap-2">
@@ -87,8 +89,10 @@ export default function TrustLayer({ variant = 'default' }) {
         </div>
 
         {/* Funder Panel */}
-        <div className="pt-6 border-t border-slate-100">
-          <p className="text-sm font-semibold text-[#1e3a5f] mb-4 text-center">Working with multiple funders:</p>
+        <div className="pt-6 border-t border-slate-100 text-center">
+          <div className="inline-block px-3 py-1 bg-[#0d9488]/10 mb-4 mx-auto" style={{ borderRadius: '4px' }}>
+            <p className="text-sm font-medium text-[#0d9488] text-center">Working with multiple funders:</p>
+          </div>
           <div className="grid grid-cols-3 sm:grid-cols-6 gap-2 mb-4">
             {[
             { label: 'Banks', icon: Building2, color: 'text-blue-600' },
