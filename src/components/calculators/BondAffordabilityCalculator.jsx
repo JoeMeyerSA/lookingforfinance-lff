@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Button } from '@/components/ui/button';
-import { Mail, CreditCard, HelpCircle } from 'lucide-react';
+import { HelpCircle } from 'lucide-react';
 
 const STORAGE_KEY = 'bond_affordability_calculator_values';
 
@@ -225,30 +225,24 @@ export default function BondAffordabilityCalculator({ onGuidanceChange, onResult
             </div>
           </div>
 
-          <Button onClick={calculate} className="w-full bg-green-600 hover:bg-green-700 h-12 text-base font-semibold">
-            RECALCULATE
+          <Button onClick={calculate} className="w-full bg-rose-600 hover:bg-rose-700 h-12 text-base font-semibold">
+            CALCULATE
           </Button>
         </div>
 
         {/* Results Column */}
         {results && (
-          <div className="bg-gradient-to-br from-rose-500 to-rose-600 rounded-3xl p-8 flex flex-col justify-between text-white shadow-xl">
-            <div>
-              <p className="text-rose-100 mb-2">Amount you qualify for</p>
-              <p className="text-5xl font-bold mb-8">{formatCurrency(results.amountQualifyFor)}</p>
-
-              <p className="text-rose-100 mb-2">Your monthly repayment amount</p>
-              <p className="text-4xl font-bold">{formatCurrency(results.monthlyRepaymentAmount)}</p>
+          <div className="bg-gradient-to-br from-rose-500 to-rose-600 rounded-3xl p-8 text-white shadow-xl">
+            <div className="mb-8">
+              <p className="text-rose-100 text-sm mb-2">Amount you qualify for</p>
+              <p className="text-5xl font-bold">{formatCurrency(results.amountQualifyFor)}</p>
             </div>
 
-            <div className="mt-8 space-y-3">
-              <Button variant="outline" className="w-full bg-white/95 text-rose-600 hover:bg-white hover:text-rose-700 border-0 h-12 font-medium">
-                <CreditCard className="w-4 h-4 mr-2" /> CHECK CREDIT SCORE
-              </Button>
-              <Button variant="outline" className="w-full bg-white/95 text-rose-600 hover:bg-white hover:text-rose-700 border-0 h-12 font-medium">
-                <Mail className="w-4 h-4 mr-2" /> EMAIL MY RESULTS
-              </Button>
-              <p className="text-xs text-rose-100 mt-4 text-center">* Terms and conditions apply</p>
+            <div className="space-y-4 pt-6 border-t border-white/20">
+              <div className="flex items-center justify-between">
+                <span className="text-sm text-rose-100">Monthly repayment amount</span>
+                <span className="font-semibold text-xl">{formatCurrency(results.monthlyRepaymentAmount)}</span>
+              </div>
             </div>
           </div>
         )}
