@@ -118,7 +118,7 @@ export default function Contact() {
                 </p>
                 <Button asChild size="sm" className="w-full bg-[#0d9488] hover:bg-[#0f766e]">
                   <Link to={createPageUrl('EligibilityCheck')}>
-                    Start Eligibility Check
+                    Start eligibility check
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </Link>
                 </Button>
