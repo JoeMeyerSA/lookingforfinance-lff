@@ -32,9 +32,9 @@ export default function HeroSection() {
 
             <div className="flex flex-col sm:flex-row gap-4 mb-10">
               <Button asChild size="lg" className="bg-[#0d9488] hover:bg-[#0f766e] text-white px-8 py-6 text-lg">
-                <Link to={createPageUrl('EligibilityCheck')}>
-                  Start Eligibility Check
-                  <ArrowRight className="w-5 h-5 ml-2" />
+                <Link to={createPageUrl('EligibilityCheck')} className="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 shadow h-10 rounded-md bg-[#0d9488] hover:bg-[#0f766e] text-white px-8 py-6 text-lg">Start eligibility check
+
+
                 </Link>
               </Button>
               <Button asChild size="lg" variant="outline" className="bg-white/10 border-white/30 text-white hover:bg-white/20 px-8 py-6 text-lg">
