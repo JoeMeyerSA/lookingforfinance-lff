@@ -229,7 +229,7 @@ export default function About() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg" className="bg-[#0d9488] hover:bg-[#0f766e] text-white">
               <Link to={createPageUrl('EligibilityCheck')}>
-                Start Eligibility Check
+                Start eligibility check
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
             </Button>
