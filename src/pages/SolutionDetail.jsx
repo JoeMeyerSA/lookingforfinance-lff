@@ -305,7 +305,7 @@ export default function SolutionDetail() {
                 </p>
                 <Button asChild size="lg" className="w-full bg-[#0d9488] hover:bg-[#0f766e]">
                   <Link to={createPageUrl('EligibilityCheck') + `?solution=${type}`}>
-                    Start Eligibility Check
+                    Start eligibility check
                     <ArrowRight className="w-5 h-5 ml-2" />
                   </Link>
                 </Button>

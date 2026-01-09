@@ -69,7 +69,7 @@ export default function Header() {
           {/* CTA Button */}
           <div className="hidden lg:block">
             <Button asChild className="bg-[#0d9488] hover:bg-[#0f766e] text-white px-6">
-              <Link to={createPageUrl('EligibilityCheck')}>Start Eligibility Check</Link>
+              <Link to={createPageUrl('EligibilityCheck')}>Start eligibility check</Link>
             </Button>
           </div>
 
@@ -109,7 +109,7 @@ export default function Header() {
               <div className="pt-4 px-4">
                 <Button asChild className="w-full bg-[#0d9488] hover:bg-[#0f766e] text-white">
                   <Link to={createPageUrl('EligibilityCheck')} onClick={() => setMobileMenuOpen(false)}>
-                    Start Eligibility Check
+                    Start eligibility check
                   </Link>
                 </Button>
               </div>
