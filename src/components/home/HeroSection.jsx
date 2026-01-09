@@ -20,8 +20,8 @@ export default function HeroSection() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
+            transition={{ duration: 0.6 }}>
+
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
               Your finance journey,{' '}
               <span className="text-[#0d9488]">made simple.</span>
@@ -38,9 +38,9 @@ export default function HeroSection() {
                 </Link>
               </Button>
               <Button asChild size="lg" variant="outline" className="bg-white/10 border-white/30 text-white hover:bg-white/20 px-8 py-6 text-lg">
-                <Link to={createPageUrl('Calculators')}>
-                  <Calculator className="w-5 h-5 mr-2" />
-                  Try a Calculator
+                <Link to={createPageUrl('Calculators')} className="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 border shadow-sm hover:text-accent-foreground h-10 rounded-md bg-white/10 border-white/30 text-white hover:bg-white/20 px-8 py-6 text-lg">Calculate Instalments
+
+
                 </Link>
               </Button>
             </div>
@@ -70,8 +70,8 @@ export default function HeroSection() {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="hidden lg:block"
-          >
+            className="hidden lg:block">
+
             <div className="relative">
               {/* Decorative Elements */}
               <div className="absolute -top-6 -right-6 w-24 h-24 bg-[#0d9488]/20 rounded-full blur-2xl" />
@@ -79,12 +79,12 @@ export default function HeroSection() {
               
               <div className="relative bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 shadow-2xl">
                 <div className="space-y-4">
-                  <motion.div 
+                  <motion.div
                     initial={{ x: -20, opacity: 0 }}
                     animate={{ x: 0, opacity: 1 }}
                     transition={{ duration: 0.5, delay: 0.4 }}
-                    className="flex items-center gap-4 p-4 bg-white/10 rounded-xl"
-                  >
+                    className="flex items-center gap-4 p-4 bg-white/10 rounded-xl">
+
                     <div className="w-12 h-12 bg-gradient-to-br from-[#0d9488] to-[#0f766e] rounded-xl flex items-center justify-center shadow-lg">
                       <CheckCircle className="w-6 h-6 text-white" />
                     </div>
@@ -94,31 +94,31 @@ export default function HeroSection() {
                     </div>
                   </motion.div>
                   <div className="grid grid-cols-2 gap-4">
-                    <motion.div 
+                    <motion.div
                       initial={{ y: 20, opacity: 0 }}
                       animate={{ y: 0, opacity: 1 }}
                       transition={{ duration: 0.5, delay: 0.5 }}
-                      className="p-4 bg-white/5 rounded-xl border border-white/10"
-                    >
+                      className="p-4 bg-white/5 rounded-xl border border-white/10">
+
                       <p className="text-slate-400 text-xs mb-1">Est. monthly</p>
                       <p className="text-2xl font-bold text-white">R 12,450</p>
                     </motion.div>
-                    <motion.div 
+                    <motion.div
                       initial={{ y: 20, opacity: 0 }}
                       animate={{ y: 0, opacity: 1 }}
                       transition={{ duration: 0.5, delay: 0.6 }}
-                      className="p-4 bg-white/5 rounded-xl border border-white/10"
-                    >
+                      className="p-4 bg-white/5 rounded-xl border border-white/10">
+
                       <p className="text-slate-400 text-xs mb-1">Term</p>
                       <p className="text-2xl font-bold text-white">20 years</p>
                     </motion.div>
                   </div>
-                  <motion.div 
+                  <motion.div
                     initial={{ y: 20, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ duration: 0.5, delay: 0.7 }}
-                    className="p-4 bg-gradient-to-br from-[#0d9488]/30 to-[#0d9488]/20 rounded-xl border border-[#0d9488]/40"
-                  >
+                    className="p-4 bg-gradient-to-br from-[#0d9488]/30 to-[#0d9488]/20 rounded-xl border border-[#0d9488]/40">
+
                     <p className="text-[#5eead4] text-sm font-medium mb-1">🎉 Next step</p>
                     <p className="text-white font-medium">Documentation guidance ready</p>
                   </motion.div>
@@ -128,6 +128,6 @@ export default function HeroSection() {
           </motion.div>
         </div>
       </div>
-    </section>
-  );
+    </section>);
+
 }
